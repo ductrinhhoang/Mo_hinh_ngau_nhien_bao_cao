@@ -1,0 +1,4 @@
+\contentsline {chapter}{{\bf M\IeC {\h \ohorn } \IeC {\dj }\IeC {\`\acircumflex }u}}{3}
+\contentsline {section}{\numberline {0.1}Gi\IeC {\'\ohorn }i thi\IeC {\d \ecircumflex }u}{4}
+\contentsline {section}{\numberline {0.2}Qua tr\IeC {\`\i }nh quy\IeC {\'\ecircumflex }t \IeC {\dj }\IeC {\d i}nh Markov}{4}
+\contentsline {chapter}{{Danh m\IeC {\d u}c c\IeC {\^o}ng tr\IeC {\`\i }nh c\IeC {\^o}ng b\IeC {\'\ocircumflex } c\IeC {\h u}a t\IeC {\'a}c gi\IeC {\h a}}}{8}

@@ -1,0 +1,146 @@
+\documentclass[13pt]{extreport}
+\usepackage[utf8]{vietnam}
+%\usepackage{type1cm}
+\usepackage[left=3.50cm, right=2.00cm, top=3.50cm, bottom=3.00cm]{geometry}
+%\usepackage[left=3.0cm, right=1.50cm, top=3.00cm, bottom=2.50cm]{geometry}
+\usepackage{graphicx}
+\usepackage{mathrsfs} 
+\usepackage{amsfonts}
+\usepackage{longtable}
+\usepackage[intlimits]{amsmath}
+\usepackage{array}
+\usepackage{amsxtra,amssymb,latexsym,amscd,amsthm}
+\newtheorem{theorem}{\MakeUppercase{K}ết quả}[section]
+% khoảng cách dòng 1.5 lines (như trong MS Word)
+\renewcommand{\baselinestretch}{1.5}
+
+%——————–
+\begin{document}
+%tao khung
+\newcommand{\Khung}[2]{
+\begin{tabular}{|l|}
+\hline\rule[-2ex]{0pt}{5.5ex}
+\parbox{#1}{#2}\\
+\hline
+\end{tabular}
+}
+
+\Khung{.92\textwidth}{
+
+\begin{center}
+\normalsize
+\textbf{TRƯỜNG ĐẠI HỌC BÁCH KHOA HÀ NỘI}\\
+\normalsize
+\textbf{VIỆN TOÁN ỨNG DỤNG VÀ TIN HỌC}\\
+\textbf{------------------------------------------------------}\\[0.4cm]
+\includegraphics[scale=.8]{logobkdentrang}\\[1.2cm]
+\textbf{{\large MÔ HÌNH HÓA DỰA TRÊN CÁ THỂ\\MÔ HÌNH RẦY NÂU HẠI LÚA}}\\[0.3cm]
+\textbf{Nghiên cứu ảnh hưởng phân bố không gian của hoa\\thu hút thiên địch rầy lên sự phát triển của rầy nâu}\\[1cm]
+\textbf{{\large ĐỒ ÁN TỐT NGHIỆP}}\\[0.2cm]
+\textbf{{\large Chuyên ngành: TOÁN TIN}}\\[1cm]
+\end{center}
+\begin{flushleft}
+\hspace{1.5cm} \textbf{ Giáo viên hướng dẫn:\hspace{0.2cm}{ TS. NGUYỄN THỊ NGỌC ANH }}\\[0.2cm]
+\hspace{1.5cm} \textbf{ Sinh viên thực hiện:\hspace{0.5cm}{ VŨ THU THẢO}}\\[0.2cm]
+\hspace{1.5cm} \textbf{ Lớp:\hspace{4.0cm}{ Toán Tin 2 - K55}}\\
+\end{flushleft}
+
+\vspace{1.3cm}
+\begin{center}
+\textbf{{\large HÀ NỘI - 2015}}\\
+\end{center}
+ }
+\thispagestyle{empty}
+\newpage
+
+\tableofcontents
+\newpage
+
+%\listoffigures
+
+\newpage
+\addcontentsline{toc}{chapter}{{\bf Mở đầu}}
+\chapter*{Bài toán}
+\chapter*{Phương pháp}
+\section{Giới thiệu}
+Trong ngành khoa học máy tính, học tăng cường (Reinforcement Learning)là một lĩnh vực con của học máy (Machine Learning), nghiên cứu cách thức một tác tử (agent) trong một môi tường nên chọn thực hiện các hành động nào để có được phần thưởng có giá trị lớn nhất về lâu về dài. Các thuật toán học tăng cường cố gắng tìm một chiến lược ánh xạ từ không gian trạng thái tới không gian hành động mà agent nên chọn trong các trạng thái đó.
+\section{Qua trình quyết định Markov}
+Quá trình quyết địng Markov (Markov Decision Processes, ký hiệu là MDP)cung cấp một nền tảng toán học cho việc mô hình hóa việc ra quyết định trong các tình huống mà kết quả là một phần ngẫu niên, một phần dưới sự điều khiển của một người ra quyết định. MDP rất hữu dụng trong việc học một loạt các bài toán tối ưu hóa được giải quyết thông qua quy hoạch động và hocn tăng cường. MDP được biết đến sớm nhất vào những năm 1950. 
+
+MDP là một quá trình điều khiển ngẫu nhiên thời gian rời rạc. MDP là một tập 5 dữ liệu $<\mathbb{S},\mathbb{A},P,R,\gamma>$. Trong đó:
+
+ $\mathbb{S}$: không gian các trạng thái
+
+ $\mathbb{A$: không gian các hành động
+ 
+ $\P: \mathbb{S} \times\mathbb{A} \times S\rightarrow\mathbb{R)$: hạt nhân chuyển tiếp Markov
+ 
+ $R: \mathbb{S} \times \mathbb{A}\rightarrow\mathbb{R)$: hàm phần thưởng, $0<\gamma<1$ là hệ số chiết khấu
+ 
+ giả sử rằng, tahi thời điểm t, trạng thái $S_t=s$ và agent có hành động $A_t=a$. khi đó, xác suất của trạng thái $B \epsilon \mathbb{S}$ tại thời điểm $t+1$ được cho bởi công thức:
+ 
+ \begin{center}
+ $P(s,a,B)=\mathbb{P}(S_(t+1) \epsilonB|S_t=s,A+t=a)$       (1)
+ \end{center}
+ 
+ sau quá trình này, agent nhận được một phần thưởng ngẫu nhiên là $R_(t+1)$. Hàm thưởng $R(s,a)$ là phần thưởng thu được khi thực hiện hành động a ở trang thái s
+ 
+ \begin{center}
+ $R(s,a)=\mathbb{E}[R_(t+1)|S_t=s,A_t=a]$         (2)
+ \end{center}
+ 
+ Tại bất kì bước thời gian nào, agent chọn hành động của nó theo một chính sách $\pi: \mathbb{S} \times A \rightarrow \mathbb{R}$ sao cho với mỗi $s \epsilon \mathbb{S},C \rightarrow \pi(s,C)$ là  xác suất phân phối trên $(\mathbb{A},A)$. Do đó, chính sách $\pi$ và trạng thái ban đầu $s_0 \epsilon \mathbb{S}$ xác định chuỗi trạng thái - hành đồng - phần thưởng ngẫu nhiên ${(S_t,A_t,R_(t+1)}_(t>=0)$ với giá trị trên $\mathbb{S} \times \mathbb{A} \times \mathbb{R}$. Trogn một không gian vô hạn,hiệu suất của agent thường được tính bằng tổng phần thưởng chiếu khấu thu được sau một chính sách là
+ 
+ \begin{center}
+ $G_t=\sum_(t=0)^ \infty \gamma ^t R_(t+k+1)$     (3)
+ \end{center}
+ 
+ Vì phần thưởng này là ngẫu nhiên, agent xem xét giá trị kì vọng của nó, thưởng được gọi là state - value function
+ 
+ \begin{center}
+ $V_ \pi (s)=\mathbb{E}_ \pi [G_t|S_t=s]$         (4) 
+ \end{center}
+ 
+ trong đó, chỉ số $\mathbb{E}_ \pi$ chỉ ra rằng xá hành đồng được chọn theo chính sách $\pi$. State - value function được đo tốt khi agent ở trong một trạng thái nhất định vaftuaan theo một chính sách nhất định. tương tự, ta có Action - value function
+ 
+ \begin{center}
+ $Q_ \pi (s,a)= \mathbb{E}_ \pi [G_t|S_t=s,A_t=a]$      (5)
+ \end{center}
+ 
+ ta có mooic liên hệ giữa $V_ \pi$ và $Q_ \pi$
+ 
+ \begin{center}
+ $V_ \pi (s)= \int _{A} \pi (s,a) Q_ \pi (s,a) da$      (6)
+ \end{center}
+ 
+ Hầu như tất cả các thuật toán học tăng cường được thiết kế để tính các hàm giá trị này dựa trên các phương trình Bellman
+ 
+ \begin{center}
+ $V_ \pi (s)=R_ \pi (s)+ \gamma T_ \pi V_ \pi (s)    $     (7)
+ 
+ $Q_ \pi (s,a) = R(s,a)+ \gamma T_a V_ ư\pi (s) $        (8)
+ \end{center}
+ 
+ khi chúng ta biểu diễn bở $T_a$ thì toán tử chuyển với hành đồng a (chính sách $\pi$)
+ 
+ \begin{center}
+ $T_s F(s)=\mathbb{E}[F(S_(t+1) |S_t = s,A_t =a]= \int _{S} P(s,a,s^') F(s^') ds^'$  (9)
+ 
+ $T_ \pi F(s)= \mathbb{E}_ pi [F(S_(t+1) |S_t = s]= \int _{\mathbb{A} } \pi (s,a) \int _{\mathbb{S}} P(s,a,a^') F(s^') F(s^') ds^' da$  (10)
+ \end{center}
+\chapter*{Ứng dụng}
+\chapter*{Kết luận}
+\newpage
+\addcontentsline{toc}{chapter}{{Danh mục công trình công bố của tác giả}}
+\chapter*{Danh mục công trình công bố của tác giả}
+\begin{flushleft}
+\quad $[1]$\ Vũ Thu Thảo, Nguyễn Ngọc Doanh, Nguyễn Nhị Gia Vinh, Nguyễn Thị\\\quad \quad \   Ngọc
+Anh, \textit{"Mô hình hóa ảnh hưởng phân bố không gian của hoa diệt rầy\\ \quad \quad \  tới
+sự phát triển của rầy nâu hại lúa"}, Tạp chí Khoa học và Công nghệ -\\\quad \quad \  Đại học Thái Nguyên, 2015, pp.119-123.\\
+\end{flushleft}
+\newpage
+\addcontentsline{toc}{chapter}{{Tài liệu tham khảo}}
+\bibliographystyle{amsplain}
+\thispagestyle{empty}
+\bibliography{science}
+\end{document}
