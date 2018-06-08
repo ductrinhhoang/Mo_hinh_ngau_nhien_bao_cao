@@ -1,28 +1,23 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Jun  4 15:12:09 2018
-
-@author: trung dang dinh
-"""
-
 import math
 import numpy as np
+import json
 
-muy = 1000
-delta = 0.01
-alpha = 0.1
-maxInter = 100
+f = open('config.json')
+json_object = json.load(f)
+muy = json_object["muy"]
+delta = json_object["delta"]
 
 def Return(Ft, Ft1, r):
     ret = muy * (Ft * r - delta * abs(Ft - Ft1))
     return ret
 
+
 def Sharpe(w, r, N, first_date):
     A = 0.0
     B = 0.0
-    n = np.size(w) - 2 # n+2 size of w
+    n = np.size(w) - 2  # n+2 size of w
     f = np.array([])
-    state = np.array([1.0]) # state = [1]
+    state = np.array([1.0])  # state = [1]
     for i in range(n):
         state = np.append(state, r[first_date + i])
     state = np.append(state, 0.0)
@@ -49,17 +44,17 @@ def Sharpe(w, r, N, first_date):
 #    plt.gcf().clear()
     return S
 
-def findW(w, r, N, first_date):
+
+def findW(w, r, N, first_date, alpha, max_loop_count, eps_for_cal_diff):
     n = np.size(w) - 2
-    eps = 0.1
-    for k in range(maxInter):
+    for k in range(max_loop_count):
         e = np.array([0.0] * (n + 2))
         dS = np.array([])
         for i in range(n + 2):
-            e[i] = eps
+            e[i] = eps_for_cal_diff
             S1 = Sharpe(w + e, r, N, first_date)
             S2 = Sharpe(w - e, r, N, first_date)
-            S = (S1 - S2)/(2*eps)
+            S = (S1 - S2)/(2*eps_for_cal_diff)
             dS = np.append(dS, S)
         w = w + alpha * dS
     return w
