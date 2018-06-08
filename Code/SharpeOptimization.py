@@ -9,15 +9,21 @@ import math
 import numpy as np
 import matplotlib.pyplot as plt
 import xlrd
+import json
 
-#Get data from excel file
-file_location = "C:/Users/trung dang dinh/Desktop/reinforcement learning/daily_MSFT_full.xlsx"
+# Get data from excel file
+f = open('config.json')
+json_obj = json.load(f)
+
+print(json_obj)
+
+file_location = json_obj.open_file
 wb = xlrd.open_workbook(file_location)
 sheet = wb.sheet_by_index(0)
 
 price = []
 #i = 1
-#while i <= sheet.nrows - 1:
+# while i <= sheet.nrows - 1:
 i = 1
 while i < 4000:
     price.append(sheet.cell_value(i, 4))
@@ -28,11 +34,11 @@ for i in range(np.size(price)):
     y = np.append(y, i)
 
 #plt.plot(y, price)
-#plt.show
+# plt.show
 
 N = 255
 
-#rt
+# rt
 r = np.array([])
 for i in range(N):
     r = np.append(r, price[i + 1] - price[i])
@@ -47,9 +53,11 @@ delta = 0.01
 alpha = 0.1
 maxInter = 100
 
+
 def Return(Ft, Ft1, r):
     ret = muy * (Ft * r - delta * abs(Ft - Ft1))
     return ret
+
 
 def Sharpe(w):
     A = 0.0
@@ -77,6 +85,7 @@ def Sharpe(w):
         S = A / math.sqrt(B - A * A)
     return S
 
+
 def findW(w):
     eps = 0.1
     for k in range(maxInter):
@@ -90,5 +99,6 @@ def findW(w):
             dS = np.append(dS, S)
         w = w + alpha * dS
     return w
+
 
 print(Sharpe(findW(w)))
