@@ -20,6 +20,14 @@ def get_price(sheet, num_day_get):
         price.append(sheet.cell_value(i, 4))
     return np.array(price)
 
+def get_shapre(RET):
+    shapre = np.array([0])
+    for i in range(1, len(RET)):
+        A = sum(RET[1:1+i])/(i+1)
+        B = RET[1:i+1].dot(RET[1:i+1])/(i+1)
+        shapre = np.append(shapre, math.sqrt(i+1)*A/(math.sqrt(B-A**2)))
+    return shapre
+
 
 def main():
     start_time = TIME.time()
@@ -79,11 +87,19 @@ def main():
     time_series = np.array(range(np.size(gain)))
 
     print("Thời gian chạy: ", TIME.time() - start_time)
+    plt.title("PnL")
     plt.plot(time_series, gain)
     plt.show()
 
     time_series = np.array(range(np.size(F_array)))
+    plt.title("Long-Short")
     plt.plot(time_series, F_array)
+    plt.show()
+
+    plt.title("Sharpe")
+    real_shapre = get_shapre(RET)
+    time_series = np.array(range(np.size(real_shapre)))
+    plt.plot(time_series, real_shapre)
     plt.show()
 
 

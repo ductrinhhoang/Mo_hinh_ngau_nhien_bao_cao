@@ -4,7 +4,7 @@
     "delta" : 0.01,
     "alpha" : 0.1,
     "max_loop_count" : 100,
-    "num_day_get": 300,
+    "num_day_get": 500,
     "num_day_in_state": 5,
     "num_day_for_train": 100,
     "num_day_for_trade": 5,
