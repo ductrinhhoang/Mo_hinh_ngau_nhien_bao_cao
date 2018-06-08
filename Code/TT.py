@@ -58,6 +58,7 @@ def main():
     # print(SO.Sharpe(SO.findW(w, r, N, 0), r, N, 0))
     RET = np.array([])
     F = 0.0  # Ft time -1
+    F_array = np.array([])
     count = N + 1
     while count < (size - 1):
         if (count - N) % m == 1:
@@ -68,17 +69,21 @@ def main():
             state = np.append(state, r[count - i])
         state = np.append(state, F)
         Ft = math.tanh(w.dot(state))
+        F_array = np.append(F_array, Ft)
         ret = SO.Return(F, Ft, r[count])
         RET = np.append(RET, ret)
         F = Ft
         count += 1
 
     gain = np.cumsum(RET)
-    print(gain)
     time_series = np.array(range(np.size(gain)))
 
     print("Thời gian chạy: ", TIME.time() - start_time)
     plt.plot(time_series, gain)
+    plt.show()
+
+    time_series = np.array(range(np.size(F_array)))
+    plt.plot(time_series, F_array)
     plt.show()
 
 

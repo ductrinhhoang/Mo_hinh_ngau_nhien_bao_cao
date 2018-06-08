@@ -43,7 +43,7 @@ def Sharpe(w, r, N, first_date):
     for i in range(np.size(f)):
         y = np.append(y, i)
 #    plt.gcf().clear()
-    return np.sqrt(num_day_get)*S
+    return S
 
 
 def findW(w, r, N, first_date, alpha, max_loop_count, eps_for_cal_diff, eps_for_exit_loop):
