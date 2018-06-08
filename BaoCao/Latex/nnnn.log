@@ -1,13 +1,13 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2018.6.3)  8 JUN 2018 08:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.6.3)  8 JUN 2018 16:41
 entering extended mode
 **./nnnn.tex
 (nnnn.tex
-LaTeX2e <2016/03/31>
-Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
+LaTeX2e <2017-04-15>
+Babel <3.15> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\extsizes\extreport.cls"
 Document Class: extreport 1996/10/08 v1.0 Non Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
-File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+("C:\Program Files\MiKTeX 2.9\tex\latex\extsizes\size14.clo"
+File: size14.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\exscale.sty"
 Package: exscale 2014/09/29 v2.1h Standard LaTeX package exscale
@@ -38,7 +38,7 @@ Package: vietnam 2009/07/12 v1.3 support for Vietnamese
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
-Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\vntex\t5enc.def"
 File: t5enc.def 2006/11/21 v1.4 Vietnamese T5 encoding
@@ -54,14 +54,14 @@ Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@posthook=\toks15
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
-File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
+File: t1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -273,6 +273,8 @@ File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+0219 (decimal 537)
    defining Unicode char U+021A (decimal 538)
    defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+0232 (decimal 562)
+   defining Unicode char U+0233 (decimal 563)
    defining Unicode char U+1E02 (decimal 7682)
    defining Unicode char U+1E03 (decimal 7683)
    defining Unicode char U+200C (decimal 8204)
@@ -293,12 +295,14 @@ File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+2039 (decimal 8249)
    defining Unicode char U+203A (decimal 8250)
    defining Unicode char U+2423 (decimal 9251)
+   defining Unicode char U+1E20 (decimal 7712)
+   defining Unicode char U+1E21 (decimal 7713)
 )
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
-File: ot1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
+File: ot1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -339,7 +343,7 @@ Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
-File: omsenc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
+File: omsenc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -530,7 +534,7 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
-Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
@@ -554,29 +558,21 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2016/05/09 v1.0r Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 96.
+Package graphics Info: Driver file: pdftex.def on input line 99.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)
-\Gread@gobject=\count91
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
+File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
@@ -599,20 +595,20 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTright=\skip44
 \LTpre=\skip45
 \LTpost=\skip46
-\LTchunksize=\count92
+\LTchunksize=\count91
 \LTcapwidth=\dimen114
 \LT@head=\box26
 \LT@firsthead=\box27
 \LT@foot=\box28
 \LT@lastfoot=\box29
-\LT@cols=\count93
-\LT@rows=\count94
-\c@LT@tables=\count95
-\c@LT@chunks=\count96
+\LT@cols=\count92
+\LT@rows=\count93
+\c@LT@tables=\count94
+\c@LT@chunks=\count95
 \LT@p@ftn=\toks19
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
-Package: amsmath 2016/03/10 v2.15b AMS math features
+Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip47
 
 For additional information on amsmath, use the `?' option.
@@ -631,30 +627,30 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count97
-LaTeX Info: Redefining \frac on input line 199.
-\uproot@=\count98
-\leftroot@=\count99
-LaTeX Info: Redefining \overline on input line 297.
-\classnum@=\count100
-\DOTSCASE@=\count101
-LaTeX Info: Redefining \ldots on input line 394.
-LaTeX Info: Redefining \dots on input line 397.
-LaTeX Info: Redefining \cdots on input line 518.
+\inf@bad=\count96
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count97
+\leftroot@=\count98
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count99
+\DOTSCASE@=\count100
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
 \Mathstrutbox@=\box30
 \strutbox@=\box31
 \big@size=\dimen117
-LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
-\macc@depth=\count102
-\c@MaxMatrixCols=\count103
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count101
+\c@MaxMatrixCols=\count102
 \dotsspace@=\muskip10
-\c@parentequation=\count104
-\dspbrk@lvl=\count105
+\c@parentequation=\count103
+\dspbrk@lvl=\count104
 \tag@help=\toks21
-\row@=\count106
-\column@=\count107
-\maxfields@=\count108
+\row@=\count105
+\column@=\count106
+\maxfields@=\count107
 \andhelp@=\toks22
 \eqnshift@=\dimen118
 \alignsep@=\dimen119
@@ -666,11 +662,11 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \multlinegap=\skip48
 \multlinetaggap=\skip49
 \mathdisplay@stack=\toks24
-LaTeX Info: Redefining \[ on input line 2739.
-LaTeX Info: Redefining \] on input line 2740.
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
-Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \col@sep=\dimen124
 \extrarowheight=\dimen125
 \NC@list=\toks25
@@ -691,7 +687,7 @@ LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amscd.sty"
-Package: amscd 1999/11/29 v2.0 AMS Commutatitive Diagrams
+Package: amscd 2017/04/14 v2.1 AMS Commutative Diagrams
 \athelp@=\toks26
 \minaw@=\dimen126
 \bigaw@=\dimen127
@@ -709,13 +705,8 @@ Package: amsthm 2015/03/04 v2.20.2
 \thm@headsep=\skip54
 \dth@everypar=\toks32
 )
-\c@theorem=\count109
-
-
-LaTeX Warning: Unused global option(s):
-    [13pt].
-
-(nnnn.aux)
+\c@theorem=\count108
+ (nnnn.aux)
 \openout1 = `nnnn.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -749,15 +740,15 @@ LaTeX Font Info:    ... okay on input line 18.
 * \textheight=610.02708pt
 * \oddsidemargin=27.31465pt
 * \evensidemargin=27.31465pt
-* \topmargin=-9.68535pt
-* \headheight=12.0pt
+* \topmargin=-11.68535pt
+* \headheight=14.0pt
 * \headsep=25.0pt
-* \topskip=10.0pt
+* \topskip=14.0pt
 * \footskip=30.0pt
-* \marginparwidth=65.0pt
-* \marginparsep=11.0pt
+* \marginparwidth=24.0pt
+* \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=12.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -769,39 +760,32 @@ LaTeX Font Info:    ... okay on input line 18.
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count110
+\scratchcounter=\count109
 \scratchdimen=\dimen129
 \scratchbox=\box32
-\nofMPsegments=\count111
-\nofMParguments=\count112
+\nofMPsegments=\count110
+\nofMParguments=\count111
 \everyMPshowfont=\toks33
-\MPscratchCnt=\count113
+\MPscratchCnt=\count112
 \MPscratchDim=\dimen130
-\MPnumerator=\count114
-\makeMPintoPDFobject=\count115
+\MPnumerator=\count113
+\makeMPintoPDFobject=\count114
 \everyMPtoPDFconversion=\toks34
-) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
-Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-))
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
@@ -810,374 +794,157 @@ Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 52.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 53.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 52.
+LaTeX Font Info:    Try loading font information for U+msa on input line 53.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 52.
+LaTeX Font Info:    Try loading font information for U+msb on input line 53.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 52.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 53.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
+<logobkdentrang.png, id=1, 60.97781pt x 87.32625pt>
+File: logobkdentrang.png Graphic file (type png)
+<use logobkdentrang.png>
+Package pdftex.def Info: logobkdentrang.png  used on input line 53. on input li
+ne 53.
+Package pdftex.def Info: Requested size: 48.78229pt x 69.86108pt on input line 
+53.
 
-! LaTeX Error: File `logobkdentrang' not found.
+Overfull \hbox (2.02336pt too wide) in paragraph at lines 53--55
+[][]
+ []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.52  }
-       
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--55
+
+ []
 
 [1
 
-{C:/Users/NgocVT/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(nnnn.toc)
+{C:/Users/DucTH/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./logobkden
+trang.png>] (nnnn.toc)
 \tf@toc=\write3
 \openout3 = `nnnn.toc'.
 
  [2
 
-] [3
+]
+Ch\uhorn \ohorn ng 1.
+[3
 
 ]
-Runaway argument?
-{A$: không gian các hành động 
-! Paragraph ended before \math@egroup was complete.
-<to be read again> 
-                   \par 
-l.75 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
+Ch\uhorn \ohorn ng 2.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.75 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+LaTeX Warning: Command \d invalid in math mode on input line 72.
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.75 
-     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
 
-Runaway argument?
-{R)$: hạt nhân chuyển tiếp Markov 
-! Paragraph ended before \math@egroup was complete.
-<to be read again> 
-                   \par 
-l.77 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
+LaTeX Warning: Command \dj invalid in math mode on input line 72.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.77 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.77 
-     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+LaTeX Warning: Command \d invalid in math mode on input line 72.
 
-Runaway argument?
-{R)$: hàm phần thưởng, $0<\gamma <1$ là hệ số chiết kh�\ETC.
-! Paragraph ended before \math@egroup was complete.
-<to be read again> 
-                   \par 
-l.79 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.79 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+LaTeX Warning: Command \` invalid in math mode on input line 72.
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.79 
-     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
 
-! Undefined control sequence.
-l.83  $P(s,a,B)=\mathbb{P}(S_(t+1) \epsilonB
-                                            |S_t=s,A+t=a)$       (1)
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+LaTeX Warning: Command \' invalid in math mode on input line 72.
 
+
+LaTeX Warning: Command \` invalid in math mode on input line 72.
+
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
 [4
 
-]
-! Missing { inserted.
-<to be read again> 
-                   \begingroup 
-l.121  $Q_ \pi (s,a) = R(s,a)+ \gamma T_a V_ ư
-                                               \pi (s) $        (8)
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
+] [5]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 83.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <14.4> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 83.
+ [6] [7]
+[8] [9]
+Ch\uhorn \ohorn ng 3.
+[10
 
+] [11] [12] [13] [14]
+Ch\uhorn \ohorn ng 4.
+[15
 
-LaTeX Warning: Command \uhorn invalid in math mode on input line 121.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.121 ...(s,a) = R(s,a)+ \gamma T_a V_ ư\pi (s) $
-                                                          (8)
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-Missing character: There is no � in font cmr7!
-! Missing { inserted.
-<to be read again> 
-                   ^
-l.127 ...+1) |S_t = s,A_t =a]= \int _{S} P(s,a,s^'
-                                                  ) F(s^') ds^'$  (9)
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing { inserted.
-<to be read again> 
-                   ^
-l.127 ...t = s,A_t =a]= \int _{S} P(s,a,s^') F(s^'
-                                                  ) ds^'$  (9)
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing { inserted.
-<to be read again> 
-                   ^
-l.127 ...A_t =a]= \int _{S} P(s,a,s^') F(s^') ds^'
-                                                  $  (9)
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.127 ..._t =a]= \int _{S} P(s,a,s^') F(s^') ds^'$
-                                                    (9)
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.127 ..._t =a]= \int _{S} P(s,a,s^') F(s^') ds^'$
-                                                    (9)
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.127 ..._t =a]= \int _{S} P(s,a,s^') F(s^') ds^'$
-                                                    (9)
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing { inserted.
-<to be read again> 
-                   ^
-l.129 ... } \pi (s,a) \int _{\mathbb{S}} P(s,a,a^'
-                                                  ) F(s^') F(s^') ds^' da$  ...
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing { inserted.
-<to be read again> 
-                   ^
-l.129 ...(s,a) \int _{\mathbb{S}} P(s,a,a^') F(s^'
-                                                  ) F(s^') ds^' da$  (10)
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing { inserted.
-<to be read again> 
-                   ^
-l.129 ...int _{\mathbb{S}} P(s,a,a^') F(s^') F(s^'
-                                                  ) ds^' da$  (10)
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing { inserted.
-<to be read again> 
-                   ^
-l.129 ...\mathbb{S}} P(s,a,a^') F(s^') F(s^') ds^'
-                                                   da$  (10)
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.129 ...hbb{S}} P(s,a,a^') F(s^') F(s^') ds^' da$
-                                                    (10)
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.129 ...hbb{S}} P(s,a,a^') F(s^') F(s^') ds^' da$
-                                                    (10)
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.129 ...hbb{S}} P(s,a,a^') F(s^') F(s^') ds^' da$
-                                                    (10)
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.129 ...hbb{S}} P(s,a,a^') F(s^') F(s^') ds^' da$
-                                                    (10)
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-[5] [6
-
-] [7
-
-] [8
+] [16
 
 ]
 No file nnnn.bbl.
 (nnnn.aux) ) 
 Here is how much of TeX's memory you used:
- 4192 strings out of 493335
- 53560 string characters out of 3139258
- 119628 words of memory out of 3000000
- 7598 multiletter control sequences out of 15000+200000
- 13817 words of font info for 36 fonts, out of 3000000 for 9000
+ 4164 strings out of 493312
+ 53817 string characters out of 3138900
+ 118282 words of memory out of 3000000
+ 7601 multiletter control sequences out of 15000+200000
+ 16676 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,9n,28p,745b,274s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\NgocVT\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\vntex\vn
-r\dpi600\vnti10.pk> <C:\Users\NgocVT\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\v
-ntex\vnr\dpi720\vnbx12.pk> <C:\Users\NgocVT\AppData\Local\MiKTeX\2.9\fonts\pk\l
-jfour\vntex\vnr\dpi600\vnr10.pk> <C:\Users\NgocVT\AppData\Local\MiKTeX\2.9\font
-s\pk\ljfour\vntex\vnr\dpi1244\vnbx12.pk> <C:\Users\NgocVT\AppData\Local\MiKTeX\
-2.9\fonts\pk\ljfour\vntex\vnr\dpi600\vnbx12.pk> <C:\Users\NgocVT\AppData\Local\
-MiKTeX\2.9\fonts\pk\ljfour\vntex\vnr\dpi600\vnbx10.pk><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/symbols/msbm7.pfb>
-Output written on nnnn.pdf (8 pages, 233879 bytes).
+ 41i,13n,27p,977b,307s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\vntex\vnr
+\dpi720\vnti12.pk> <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\vnt
+ex\vnr\dpi1037\vnbx12.pk> <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\vntex\vnr\dpi1493\vnbx12.pk> <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\fonts
+\pk\ljfour\vntex\vnr\dpi720\vnr12.pk> <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\
+fonts\pk\ljfour\vntex\vnr\dpi1792\vnbx12.pk> <C:\Users\DucTH\AppData\Local\MiKT
+eX\2.9\fonts\pk\ljfour\vntex\vnr\dpi864\vnbx12.pk> <C:\Users\DucTH\AppData\Loca
+l\MiKTeX\2.9\fonts\pk\ljfour\vntex\vnr\dpi720\vnbx12.pk><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on nnnn.pdf (16 pages, 293855 bytes).
 PDF statistics:
- 435 PDF objects out of 1000 (max. 8388607)
+ 488 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
