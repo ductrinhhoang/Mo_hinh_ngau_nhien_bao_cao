@@ -7,73 +7,32 @@ Created on Mon Jun  4 15:12:09 2018
 
 import math
 import numpy as np
-import matplotlib.pyplot as plt
-import xlrd
-import json
-import time
 
-start = time.time()
-
-# Get data from excel file
-f = open('config.json')
-json_obj = json.load(f)
-
-file_location = json_obj['open_path']
-wb = xlrd.open_workbook(file_location)
-sheet = wb.sheet_by_index(0)
-
-price = []
-#i = 1
-# while i <= sheet.nrows - 1:
-i = 1
-while i < 4000:
-    price.append(sheet.cell_value(i, 4))
-    i += 1
-
-y = np.array([])
-for i in range(np.size(price)):
-    y = np.append(y, i)
-
-#plt.plot(y, price)
-# plt.show
-
-N = 255
-
-# rt
-r = np.array([])
-for i in range(N):
-    r = np.append(r, price[i + 1] - price[i])
-
-first_date = 5
-n = 5
-
-w = np.array([0] * (n + 2))
-F = 0
 muy = 1000
 delta = 0.01
 alpha = 0.1
 maxInter = 100
 
-
 def Return(Ft, Ft1, r):
     ret = muy * (Ft * r - delta * abs(Ft - Ft1))
     return ret
 
-
-def Sharpe(w):
+def Sharpe(w, r, N, first_date):
     A = 0.0
     B = 0.0
-    state = np.array([1.0])
+    n = np.size(w) - 2 # n+2 size of w
+    f = np.array([])
+    state = np.array([1.0]) # state = [1]
     for i in range(n):
-        state = np.append(state, r[i])
+        state = np.append(state, r[first_date + i])
     state = np.append(state, 0.0)
     for i in range(N - n):
         F = math.tanh(w.dot(state))
-        ret = Return(F, state[n + 1], r[n + i])
+        ret = Return(F, state[n + 1], r[first_date + n + i])
         A += ret
         B += ret * ret
         state = np.delete(state, n + 1)
-        state = np.append(state, r[n + i])
+        state = np.append(state, r[first_date + n + i])
         state = np.append(state, F)
         state = np.delete(state, 0)
         state = np.delete(state, 0)
@@ -84,24 +43,23 @@ def Sharpe(w):
         S = 0.0
     else:
         S = A / math.sqrt(B - A * A)
+    y = np.array([])
+    for i in range(np.size(f)):
+        y = np.append(y, i)
+#    plt.gcf().clear()
     return S
 
-
-def findW(w):
+def findW(w, r, N, first_date):
+    n = np.size(w) - 2
     eps = 0.1
     for k in range(maxInter):
         e = np.array([0.0] * (n + 2))
         dS = np.array([])
         for i in range(n + 2):
             e[i] = eps
-            S1 = Sharpe(w + e)
-            S2 = Sharpe(w - e)
+            S1 = Sharpe(w + e, r, N, first_date)
+            S2 = Sharpe(w - e, r, N, first_date)
             S = (S1 - S2)/(2*eps)
             dS = np.append(dS, S)
         w = w + alpha * dS
     return w
-
-
-print(np.sqrt(255)*Sharpe(findW(w)))
-
-print("Thời gian chạy: ", time.time() - start)
