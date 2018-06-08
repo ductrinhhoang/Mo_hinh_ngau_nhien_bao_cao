@@ -10,14 +10,15 @@ import numpy as np
 import matplotlib.pyplot as plt
 import xlrd
 import json
+import time
+
+start = time.time()
 
 # Get data from excel file
 f = open('config.json')
 json_obj = json.load(f)
 
-print(json_obj)
-
-file_location = json_obj.open_file
+file_location = json_obj['open_path']
 wb = xlrd.open_workbook(file_location)
 sheet = wb.sheet_by_index(0)
 
@@ -101,4 +102,6 @@ def findW(w):
     return w
 
 
-print(Sharpe(findW(w)))
+print(np.sqrt(255)*Sharpe(findW(w)))
+
+print("Thời gian chạy: ", time.time() - start)
