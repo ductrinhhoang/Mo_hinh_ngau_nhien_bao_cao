@@ -1,12 +1,13 @@
-\contentsline {chapter}{\numberline {1}B\IeC {\`a}i to\IeC {\'a}n}{3}
-\contentsline {chapter}{\numberline {2}Ph\IeC {\uhorn }\IeC {\ohorn }ng ph\IeC {\'a}p}{4}
-\contentsline {section}{\numberline {2.1}Gi\IeC {\'\ohorn }i thi\IeC {\d \ecircumflex }u}{4}
-\contentsline {section}{\numberline {2.2}Qu\IeC {\'a} tr\IeC {\`\i }nh quy\IeC {\'\ecircumflex }t \IeC {\dj }\IeC {\d i}nh Markov}{4}
-\contentsline {chapter}{\numberline {3}\IeC {\'\UHORN }ng d\IeC {\d u}ng}{10}
-\contentsline {section}{\numberline {3.1}Gi\IeC {\'\ohorn }i thi\IeC {\d \ecircumflex }u}{10}
-\contentsline {section}{\numberline {3.2}H\IeC {\`a}m m\IeC {\d u}c ti\IeC {\^e}u: SHARPE}{11}
-\contentsline {section}{\numberline {3.3}H\IeC {\`a}m \IeC {\dj }\IeC {\`\acircumflex }u t\IeC {\uhorn }}{11}
-\contentsline {section}{\numberline {3.4}H\IeC {\uhorn }\IeC {\'\ohorn }ng t\IeC {\u a}ng}{13}
-\contentsline {section}{\numberline {3.5}Thu\IeC {\d \acircumflex }t to\IeC {\'a}n}{14}
-\contentsline {chapter}{\numberline {4}K\IeC {\'\ecircumflex }t lu\IeC {\d \acircumflex }n}{15}
-\contentsline {chapter}{{Danh m\IeC {\d u}c c\IeC {\^o}ng tr\IeC {\`\i }nh c\IeC {\^o}ng b\IeC {\'\ocircumflex } c\IeC {\h u}a t\IeC {\'a}c gi\IeC {\h a}}}{16}
+\contentsline {chapter}{\numberline {1}Gi\IeC {\'\ohorn }i thi\IeC {\d \ecircumflex }u b\IeC {\`a}i to\IeC {\'a}n}{3}
+\contentsline {chapter}{\numberline {2}Ph\IeC {\uhorn }\IeC {\ohorn }ng ph\IeC {\'a}p}{5}
+\contentsline {section}{\numberline {2.1}Gi\IeC {\'\ohorn }i thi\IeC {\d \ecircumflex }u}{5}
+\contentsline {section}{\numberline {2.2}Qu\IeC {\'a} tr\IeC {\`\i }nh quy\IeC {\'\ecircumflex }t \IeC {\dj }\IeC {\d i}nh Markov}{5}
+\contentsline {section}{\numberline {2.3}Ph\IeC {\uhorn }\IeC {\ohorn }ng ph\IeC {\'a}p Gradient Ascent}{10}
+\contentsline {chapter}{\numberline {3}\IeC {\'\UHORN }ng d\IeC {\d u}ng}{12}
+\contentsline {section}{\numberline {3.1}Hai kh\IeC {\'a}i ni\IeC {\d \ecircumflex }m c\IeC {\ohorn } b\IeC {\h a}n}{12}
+\contentsline {section}{\numberline {3.2}H\IeC {\`a}m m\IeC {\d u}c ti\IeC {\^e}u: SHARPE}{12}
+\contentsline {section}{\numberline {3.3}H\IeC {\`a}m \IeC {\dj }\IeC {\`\acircumflex }u t\IeC {\uhorn }}{13}
+\contentsline {section}{\numberline {3.4}H\IeC {\uhorn }\IeC {\'\ohorn }ng t\IeC {\u a}ng}{14}
+\contentsline {section}{\numberline {3.5}Thu\IeC {\d \acircumflex }t to\IeC {\'a}n}{16}
+\contentsline {chapter}{\numberline {4}K\IeC {\'\ecircumflex }t lu\IeC {\d \acircumflex }n}{18}
+\contentsline {chapter}{{Danh m\IeC {\d u}c c\IeC {\^o}ng tr\IeC {\`\i }nh c\IeC {\^o}ng b\IeC {\'\ocircumflex } c\IeC {\h u}a t\IeC {\'a}c gi\IeC {\h a}}}{21}

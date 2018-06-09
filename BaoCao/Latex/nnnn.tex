@@ -34,10 +34,12 @@
 \textbf{VIỆN TOÁN ỨNG DỤNG VÀ TIN HỌC}\\
 \textbf{------------------------------------------------------}\\[0.4cm]
 \includegraphics[scale=.8]{logobkdentrang}\\[1.2cm]
+\textbf{{ BÀI TẬP LỚN:}}\\
 \textbf{{\large ỨNG DỤNG HỌC TĂNG CƯỜNG VÀO}}\\
 \textbf{{\largeĐẦU TƯ CHỨNG KHOÁN}}\\
 \end{center}
 \begin{flushleft}
+\vspace{1.3cm}
 \hspace{1.5cm} \textbf{ Giáng viên hướng dẫn:{ TS. Nguyễn Thị Ngọc Anh }}\\[0.2cm]
 \hspace{1.5cm} \textbf{ Nhóm Sinh viên thực hiện:}\\[0.2cm]
 \hspace{7.4cm}\textbf{ Vũ Thị Ngọc}\\[0.2cm]
@@ -46,9 +48,8 @@
 \hspace{1.5cm} \textbf{ Lớp:\hspace{4.5cm}{ KSTN Toán Tin K60}}\\
 \end{flushleft}
 
-\vspace{1.3cm}
 \begin{center}
-\textbf{{\large HÀ NỘI - 06/2018}}\\
+\textbf{{\small HÀ NỘI - 06/2018}}\\
 \end{center}
  }
 \thispagestyle{empty}
@@ -60,7 +61,27 @@
 %\listoffigures
 
 \newpage
-\chapter{Bài toán}
+\chapter{Giới thiệu bài toán}
+
+Ngày nay, việc đầu tư chứng khoán là lĩnh vực đầu tư phát triển rất mạnh, thu hút sự quan tâm của không ít các nhà đầu tư trên khắp thế giới. Nhà đầu tư tốt sẽ thu được lợi nhuận kể cả khi giá cổ phiếu có chiều hướng tăng hoặc giảm. Cụ thể:
+
+$\quad \bullet$ Khi cổ phiếu đang có xu hướng tăng, nhà đầu tư sẽ mua cổ phiếu đó trước khi giá tiếp tục tăng và bán trước khi giá sẽ giảm
+
+$\quad \bullet$ Khi cổ phiếu đang có xu hướng giảm, nhà đầu tư sẽ đi vay cổ phiếu và lập tức bán đi. Đợi khi giá cổ phiếu giảm đến một mức nào đó, nhà đầu tư sẽ đi mua lại đủ cổ phiếu và trả cho người đã cho vay
+
+Chiến lược đầu tư rất thông minh phải không? Tuy nhiên vấn đề ở đây là ta biết khi nào giá cổ phiếu đang có xu hướng tăng và khi nào giảm.
+\\ 
+
+Dựa trên suy nghĩ rằng giá cổ phiếu thay đổi là có quy luật, người ta xây dựng một cách tiếp cận tương đối mới với giao dịch tài chính là sử dụng thuật toán học máy để dự đoán giá cổ phiếu tăng hoặc giảm trước khi nó xảy ra.
+
+Trong bài này, nhóm em xin trình bày một cách tiếp cận như vậy với phương pháp học tăng cường và sử dụng ý tưởng cốt lõi để tối ưu là phương pháp hướng tăng Gradient. Cụ thể:
+
+$\quad \bullet$ \textit{Chương 2: Trình bày các khái niệm cơ bản về học tăng cường và phương pháp hướng tăng Gradient}
+
+$\quad \bullet$ \textit{Chương 3: Trình bày cách ứng dụng vào đầu tư chứng khoán}
+
+$\quad \bullet$ \textit{Chương 4: Kết luận và một số kết quả được nhóm rút ra trong quá trình làm}
+
 \chapter{Phương pháp}
 \section{Giới thiệu}
 
@@ -69,7 +90,7 @@
  
 \section{Quá trình quyết định Markov}
 
- Quá trình quyết định Markov (Markov Decision Processes, ký hiệu là MDP)cung cấp một nền tảng toán học cho việc mô hình hóa việc ra quyết định trong các tình huống mà kết quả là một phần ngẫu niên, một phần dưới sự điều khiển của một người ra quyết định. MDP rất hữu dụng trong việc học một loạt các bài toán tối ưu hóa được giải quyết thông qua quy hoạch động và hocn tăng cường. MDP được biết đến sớm nhất vào những năm 1950 (cf. Bellman 1957).  Một cốt lõi của nghiên cứu về quá trình ra quyết định Markov là từ kết quả của cuốn sách của Ronald A. Howard xuất bản năm 1960, $Quy hoạch động và quá trình Markov$. Chúng được sử dụng trong rất nhiều các lĩnh vực khác nhau, bao gồm robot, điều khiển tự động,kinh tế, và chế tạo.
+ Quá trình quyết định Markov (Markov Decision Processes, ký hiệu là MDP)cung cấp một nền tảng toán học cho việc mô hình hóa việc ra quyết định trong các tình huống mà kết quả là một phần ngẫu niên, một phần dưới sự điều khiển của một người ra quyết định. MDP rất hữu dụng trong việc học một loạt các bài toán tối ưu hóa được giải quyết thông qua quy hoạch động và hocn tăng cường. MDP được biết đến sớm nhất vào những năm 1950 (cf. Bellman 1957).  Một cốt lõi của nghiên cứu về quá trình ra quyết định Markov là từ kết quả của cuốn sách của Ronald A. Howard xuất bản năm 1960, Quy hoạch động và quá trình Markov. Chúng được sử dụng trong rất nhiều các lĩnh vực khác nhau, bao gồm robot, điều khiển tự động,kinh tế, và chế tạo.
  
  Chính xác hơn, một quá trình quyết định Markov là một quá trình điều khiển ngẫu nhiên thời gian rời rạc. Tại mỗi bước thời gian, quá trình này trong một vài trạng thái $s$, và người ra quyết định có thể chọn bất kỳ hành động $a$ nào có hiệu lực trong trạng thái $s$. Quá trình này đáp ứng tại bước thời gian tiếp theo bằng cách di chuyển ngẫu nhiên vào một trạng thái mới $s'$, và đưa ra cho người ra quyết định một phần thưởng tương ứng $R_a (s,s')$
  
@@ -143,7 +164,7 @@ MDP là một quá trình điều khiển ngẫu nhiên thời gian rời rạc.
  $V_{*} (s)= \sup_{\pi} V_\pi (s)$  (11)
  \end{center}
  
- và Optimal Action - Value Function
+ và hàm tối ưu giá trị-hành động
  
  \begin{center}
  $Q_{*}(s,a)= \sup _\pi Q_\pi (s,a)$ (12)
@@ -162,16 +183,50 @@ MDP là một quá trình điều khiển ngẫu nhiên thời gian rời rạc.
 Một lần nữa, đây là những phương trình điểm cố định mà luôn tồn tại và duy nhất một giải pháp do định lý ánh xạ co. Với hàm giá trị trạng thái tối ưu $Q_*$. Một chính sách tối ưu thu được bằng cách chọn mỗi trạng thái hành động với giá trị lớn nhất $Q_*$
 
 \begin{center}
-$a_*= argsup _{a} Q_* (s,a)$ (15)
+$a_*$ = $argsup_{a}$  $Q_*(s,a)$ (15)
 \end{center}
 
 Chính sách tham lam này được xác định và chỉ phụ thuộc vào trạng thái hiện tại của hệ thống
+
+\section{Phương pháp Gradient Ascent}
+Trong Machine Learning nói riêng và Toán Tối Ưu nói chung, chúng ta thường xuyên phải tìm giá trị lớn nhất (hoặc đôi khi là nhỏ nhất) của một hàm số nào đó.
+
+Nhìn chung, việc tìm giá trị tối ưu toàn cục của các hàm mục tiêu trong Machine Learning là rất phức tạp, thậm chí là bất khả thi. Thay vào đó, người ta sẽ cố gắng tìm các điểm tối ưu địa phương của bài toán.
+
+Ta đã biết, $x^*$ là nghiệm tối ưu địa phương bài toán max f(x) v.đ.k x $\in$ $\mathbb{R}^n$ thì $x^*$ là nghiệm của phương trình $\nabla f(x)$ = 0. Để tính được nghiệm tối ưu toàn cục, ta có thể tính tất cả các nghiệm của phương trình $\nabla f(x)$ = 0. Tuy nhiên, việc này đa số cũng là bất khả thi vì có thể sự phức tạp của đạo hàm hoặc dữ liệu có số chiều lớn làm ta không thể tìm được nghiệm.
+
+Hướng tiếp cận phổ biến nhất là xuất phát từ một điểm mà chúng ta coi là gần với nghiệm của bài toán, sau đó dùng một phép toán lặp để tiến dần đến điểm cần tìm, tức đến khi đạo hàm gần với 0
+
+Theo lí thuyết qui hoạch phi tuyến trong Toán Tối ưu, ta biết rằng từ một điểm $u \in \mathbb{R}^n$ thì $\nabla f(u)$ chính là hướng tăng của f(x) tại u. Tức là, $\exists \epsilon >0$ thỏa mãn: f(u) $\leq$ f(u+$\delta.\nabla f(u)$), $\forall \delta \in (0, \epsilon)$
+
+Xuất phát từ ý tưởng này, ta sẽ triển khai để xây dựng một dãy $(x^n)_{n=0}^{\infty}$ sao cho $lim$ $ x^n \rightarrow x^*$ khi n $\rightarrow \infty$
+
+$\quad$ B0: Chọn $x^0 \in \mathbb{R}^n$, $\epsilon >0$, $\eta > 0$, gán k := 0, N > 1, n = 1
+
+$\quad$ B1: Nếu $\nabla f(x^k) \approx 0$. Chọn x đủ gần $x^k$ và kiểm tra f(x) - f($x^k$).
+ 
+$\quad \quad \bullet$ Nếu f(x) - f($x^k) \leq$   0. Gán $x^* = x^k$ chuyển sang B3
+
+$\quad \quad \bullet$ Ngược lại. Chuyển sang B2
+
+$\quad$ B2: n := n+1. 
+
+$\quad \quad \bullet$ Nếu n = N hoặc $|f(x^k + \eta.\nabla f(x^k)) - f(x^k)| < \epsilon$ thì gán $x^* = x^k$ và chuyển sang B3.
+
+$\quad \quad \bullet$ Ngược lại, gán $x^k = x^k + \eta.f(x^k)$ rồi quay lại B1
+
+$\quad$ B3: Thông báo $x*$ và kết thúc chương trình
+
+
+
 \chapter{Ứng dụng}
 
-\section{Giới thiệu}
-Một cách tiếp cận tương đối mới với giao dịch tài chính là sử dụng thuật toán học máy để dự đoán giá cổ phiếu tăng hoặc giảm trước khi nó xả ra. Một nhà đầu tư tối ưu sẽ mua cổ phiếu trước khi giá của nó tăng và bán trước khi nó giảm.
+\section{Hai khái niệm cơ bản}
 
-Một nhà giao dịch tài chính sẽ sử dụng học tăng cường tiếp diễn. Thuật toán và các tham số lấy từ bài báo của Moody và Saffel. Thuật toán hướng tăng mà tối đa hóa giá tri hàm thưởng còn gọi là Sharpe. Việc chọn tham số tối ưu $w$ cho nhà giao dịch, chúng ta cố gắng tận dụng lợi thế của thay đổi giá cổ phiếu. Một ví dụ về cách làm việc của nhà giao dịch, cả "thế giới thực" và ảo đều được minh họa trong phần cuối của chương.
+$\quad \quad \bullet$ \textbf{Long}: Ta nói rằng ta \textbf{long} n cổ phiếu nghĩa là ta sẽ mua n cổ phiếu và hi vọng giá cổ phiếu này sẽ tăng
+
+$\bullet$ \textbf{Short}: Ta nói rằng ta \textbf{short} n cổ phiếu nghĩa là ta sẽ đi vay n cổ phiếu và bán ngay. Với hi vọng giá cổ phiếu sẽ giảm, ta sẽ đợi đến khi nó giảm và mua lại rồi trả cho cổ phiếu cho người cho vay
+
 
 \section{Hàm mục tiêu: SHARPE}
 
@@ -179,23 +234,23 @@ Với mỗi thời điểm của lợi nhuận đầu tư, Sharpe được xác 
 
 
 \begin{center}
-$ S_T= \frac{Average(R_t)}{Standard Deviation (R_t)}$ với $t$ là số nguyên, $t=1,2,...,$ T  
+$ S_T=$ {\Large $\frac{Average(R_t)}{Standard \hspace{0.1cm}  Deviation (R_t)}$} với $t =1,2,...,$ T  
 \end{center}
 
 
-Trong đó, $R_t$ là lợi nhuận đầu tư cho giao dịch tại thời điểm t. Bằng trực giác, Sharpe thưởng cho các chiến lược đầu tư dựa vào xu hướng ít biến động để tạo ra lợi nhuận.
+Trong đó, $R_t$ là lợi nhuận đầu tư cho giao dịch tại thời điểm t so với thời điểm t-1. Bằng trực giác, Sharpe thưởng cho các chiến lược đầu tư dựa vào xu hướng ít biến động để tạo ra lợi nhuận.
 
 \section{Hàm đầu tư}
 
-Nhà đầu tư sẽ cố gắng sao cho Sharpe đạt giá trị lớn nhất cho mỗi chuỗi thời gian nhất định. Với bài báo cáo natf, hàm đầu tư có công thức là:
+Nhà đầu tư sẽ cố gắng sao cho Sharpe đạt giá trị lớn nhất cho mỗi chuỗi thời gian nhất định. Với bài báo cáo này, hàm đầu tư có công thức là:
 
 \begin{center}
 $F_t = tanh(w^T x_t)$
 \end{center}
 
-trong đó M là số chuỗi thời gian đầu vào cho nhà đầu tư, tham số $w \in R^{M+2}$, vector đầu vào $x_t=[1,r_t,...,r_{t-M},F_{t-1}]$, và doanh thu $r_t=p_t - p_{t-1}$
+trong đó M là số chuỗi thời gian đầu vào cho nhà đầu tư, tham số $w \in R^{M+2}$, vector đầu vào $x_t=[1,r_t,...,r_{t-M},F_{t-1}]$, và $r_t=p_t - p_{t-1}$, với $p_t$ là giá của cổ phiếu ở thời điểm t
 
-Lưu ý tằng $r_t$ là khác nhau với giá trị của cổ phiếu giữa thời điểm hiện tại t và thời điểm trước đó. Vì vậy, $r_t$ là lợi nhuận trong một phần cổ phiếu được mua ở thời gian $t-1$
+Để ý rằng $r_t$ là sai khác giá trị của cổ phiếu giữa thời điểm hiện tại t và thời điểm trước đó. Vì vậy, $r_t$ là lợi nhuận trên một cổ phiếu được mua ở thời gian $t-1$
 
 Ngoài ra, hàm $F_t \in [-1,1]$ cho biết trường hợp đầu tư tại thời điểm t. Có 3 trường hợp có thể có: long, short, neutral
 \begin{itemize}
@@ -216,100 +271,142 @@ trong đó, $\delta$ là chi phí giao dịch tại thời điểm t. Nếu $F_t
 
 \section{Hướng tăng}
 
-Tối đa hóa Sharpe tuân theo hướng tăng. DDaaud tiên chúng ta xác định hàm thưởng bằng cách sử dụng công thức cơ bản của thống kê cho trung bình và phương sai.
+Tối đa hóa Sharpe tuân theo hướng tăng. Đầu tiên chúng ta xác định hàm thưởng bằng cách sử dụng công thức cơ bản của thống kê cho kì vọng và phương sai.
 
 Ta có:
 
 
 \begin{center}
-$S_r=\frac{E[R_t]}{\sqrt{E[R_t ^2]-(E[R_t])^2}} =\frac{A}{\sqrt{B-A^2}}$
+$S_T=$ {\Large$\frac{E[R_t]}{\sqrt{E[R_t ^2]-(E[R_t])^2}} =\frac{A}{\sqrt{B-A^2}}$}
 \end{center}
 
 
-Với $A=\frac{1}{T} \sum_{t=1}^{T}R_t$ và $B=\frac{1}{T} \sum_{t=1}^{T}R_t^2$
-
+\hspace{6cm} ,với $A=${\large $\frac{1}{T} \sum_{t=1}^{T}R_t$ }và $B$= {\large$\frac{1}{T} \sum_{t=1}^{T}R_t^2$} $\newline$
 
 Sau đó chúng ta lấy đạo hàm của $S_T$ sử dụng chuỗi:
+{\Large
 \begin{center}
-$\frac{dS_T}{dw}=\frac{d}{dw}\left \{ \frac{A}{\sqrt{B-A^2}} \right \}=\frac{dS_T}{dA}.\frac{dA}{dw}+\frac{dS_T}{dB}.\frac{dB}{dw}$
+$\frac{\partial S_T}{\partial w}=\frac{\partial}{\partial w}\left \{ \frac{A}{\sqrt{B-A^2}} \right \}=\frac{dS_T}{dA}.\frac{\partial A}{\partial w}+\frac{dS_T}{dB}.\frac{\partial B}{\partial w}$
 
 
-$=\sum_{t=1}^{T} \left\{\frac{dS_T}{dA}.\frac{dA}{dR_t}+\frac{dS_T}{dB}.\frac{dB}{dR_t}\right\}.\frac{dR_T}{dw}$
+$=\sum_{t=1}^{T} \left\{\frac{dS_T}{dA}.\frac{dA}{dR_t}+\frac{dS_T}{dB}.\frac{dB}{dR_t}\right\}.\frac{\partial R_t}{\partial w}$
 
 
-$=\sum_{t=1}^{T} \left\{\frac{dS_T}{dA}.\frac{dA}{dR_t}+\frac{dS_T}{dB}.\frac{dB}{dR_t}\right\}. \left\{\frac{dR_t}{dF_t}.\frac{dF_t}{dw}+\frac{dR_t}{dF_{t-1}} \frac{dF_{t-1}}{dw}\right\}$
+$\hspace{0.5cm} =\sum_{t=1}^{T} \left\{\frac{dS_T}{dA}.\frac{dA}{dR_t}+\frac{dS_T}{dB}.\frac{dB}{dR_t}\right\}. \left\{\frac{dR_t}{dF_t}.\frac{\partial F_t}{\partial w}+\frac{dR_t}{dF_{t-1}} \frac{\partial F_{t-1}}{\partial w}\right\}$
 \end{center}
+}
 
 Đạo hàm từng phần, kết quả trả về được hàm:
 
-$\frac{dR_t}{dF_t}$
-
-=$\frac{d}{dF_t}\left \{ \mu\left ( F_{t-1}.r_t-\delta\left | F_t-F_{t-1} \right | \right ) \right \}$
+$\bullet$ {\Large $\frac{dR_t}{dF_t}$ = $\frac{d}{dF_t} $ } $\left \{ \mu\left ( F_{t-1}.r_t-\delta\left | F_t-F_{t-1} \right | \right ) \right \}$
 
 
-=$\frac{d}{dF_t}\left \{ -\mu.\delta.\left | F_t-F_{t-1} \right | \right \}$
+{\Large \hspace{1.2cm} =$\frac{d}{dF_t}$ } $\left \{ -\mu.\delta.\left | F_t-F_{t-1} \right | \right \}$
 
 
-=$\left\{\begin{matrix}
+\hspace{1.2cm}=$\left\{\begin{matrix}
  -\mu.\delta \ \  F_t-F_{t-1}>0  & \\ 
  \mu.\delta \ \ F_t-F_{t-1}<0
 \end{matrix}\right.$
 
 
-=$-\mu\delta.sign\left ( F_t-F_{t-1} \right )$
+\hspace{1.2cm}=$-\mu\delta.sign\left ( F_t-F_{t-1} \right )$
 
-$\frac{dR_t}{dF_{t-1}}$
-
-
-=$\frac{d}{dF_{t-1}}\left \{ \mu\left ( F_{t-1}.r_t-\delta\left | F_t-F_{t-1} \right | \right ) \right \}$
+{\Large $\bullet \frac{dR_t}{dF_{t-1}}$} {\Large=$\frac{d}{dF_{t-1}}$ }$\left \{ \mu\left ( F_{t-1}.r_t-\delta\left | F_t-F_{t-1} \right | \right ) \right \}$
 
 
-=$\mu.r_t-\frac{d}{dF_{t-1}}\left \{ -\mu.\delta.\left | F_t-F_{t-1} \right | \right \}$
+\hspace{1.2cm} = {\Large$\mu.r_t-\frac{d}{dF_{t-1}}$}$\left \{ -\mu.\delta.\left | F_t-F_{t-1} \right | \right \}$
 
 
-=$\left\{\begin{matrix}
+\hspace{1.2cm}=$\left\{\begin{matrix}
  \mu.\delta \ \  F_t-F_{t-1}>0  & \\ 
  -\mu.\delta \ \ F_t-F_{t-1}<0
 \end{matrix}\right.$
 
 
-=$\mu.r_t+\mu \delta.sign\left ( F_t-F_{t-1} \right )$
+\hspace{1.2cm}=$\mu.r_t+\mu \delta.sign\left ( F_t-F_{t-1} \right )$
 
 
 Khi đó, đạo hàm từng phần $dF_t/dw$ và $dF_{t-1}/dw$ được tính như sau:
 
-$\frac{dF_t}{dw}$
+{\Large $\bullet\frac{\partial F_t}{\partial w} = \frac{\partial}{\partial w}$ }$\left \{ tanh(w^Tx_t) \right \}$
 
+\hspace{1.2cm}=$\left ( 1-tanh\left ( w^Tx_t \right )^2 \right ).$ {\Large$\frac{\partial}{\partial w}$ } $.\left \{ w^T.x_t \right \}$
 
-=$\frac{d}{dw}\left \{ tanh(w^Tx_t) \right \}$
+\hspace{1.2cm}=$\left ( 1-tanh\left ( w^Tx_t \right )^2 \right )\left \{ x_t+w_{M+2}\frac{\partial F_{t-1}}{\partial w}\right \}$
 
+Lưu ý rằng đạo hàm $\partial F_t/\partial w$ có tính hồi quy và phụ thuộc vào tất cả các giá trị trước đó của nó. Điều này nghĩa là để tính được tham số thì ta phải có giá trị $\partial F_t/\partial w$ từ chuỗi thời gian ban đầu. Bởi vì dữ liệu cổ phiếu trong khoảng 1000 - 2000 mẫu, điều này làm chậm hướng tăng nhưng vẫn tính toán được.
 
-=$\left ( 1-tanh\left ( w^Tx_t \right )^2 \right ).\frac{d}{dw}.\left \{ w^Tx_t \right \}$
-
-
-=$\left ( 1-tanh\left ( w^Tx_t \right )^2 \right )\left \{ x_t+w_{M+2} \frac{dF_{t-1}}{dw} \right \}$
-
-Lưu ý rằng đạo hàm $dF_t/dw$ có tính hồi quy và phụ thuộc vào tất cả các giá trị trước đó của nó. Điều này nghĩa là để tính được tham số thì ta phải có giá trị $dF_t/dw$ từ chuỗi thời gian ban đầu. Bởi vì dữ liệu cổ phiếu trong khoảng 1000 - 2000 mẫu, điều này làm chậm hướng tăng nhưng vẫn tính toán được. Một cách khác là sử dụng học trực tuyến và ước lượng $dF_t/dw$ chỉ sử dụng điều kiện $dF_{t-1}/dw$ giúp cho thuật toán hướng tăng như trong bài báo của Moody và Saffell. Tuy nhiên, trong bài báo cáo này sử dụng các công thức chính xác ở trên.
-
-Khi điều kiện $dS_t/dw$ được tính toán, khối lượng ta cập nhật tuân theo nguyên tắc hướng tăng: $w_{t+1}=w_t+\rho.dS_T/dw$. Quá trình đươc lặp lại với số lần lặp $N_e$ với $N_e$ được chọn đảm bảo rằng Sharpe hội tụ.
+Khi điều kiện $\partial S_t/\partial w$ được tính toán, khối lượng ta cập nhật tuân theo nguyên tắc hướng tăng: $w_{t+1}=w_t+\rho.\partial S_T/\partial w$. Quá trình đươc lặp lại với số lần lặp tối đa $N_e$.
 
 \section{Thuật toán}
 
+*\textbf{Input: }
+
+$\quad \bullet$ Kho dữ liệu giá $\mathbb{P}$ trong T ngày
+
+$\quad \bullet $ $n$ là số ngày trong trạng thái( không gian trạng thái là $\mathbb{R}^{n+2}$ )
+
+$\quad \bullet $ N là số ngày dùng để luyện
+
+$\quad \bullet $ m là số ngày sẽ áp dụng cùng một chiến thuật
+
+$\quad \bullet $ {\large $\mu$} là số cổ phiếu tối đa \textbf{long} hoặc \textbf{short} 
+
+$\quad \bullet $ {\large $\delta$} là tỉ lệ phần trăm chi phí giao dịch trên 1 cổ phiếu 
+
+$\quad \bullet $ $N_e$ là số lần lặp tối đa dùng trong phương pháp hướng tăng gradient
+
+$\quad \bullet $ {\large $\epsilon$} là sai số chấp nhận trong phương pháp hướng tăng gradient
+
+
+*\textbf{Output: } Lợi nhuận $\mathit{R}$, shapre $\mathit{S}$ và phương án đầu tư $\mathit{F}$ 
+
+*\textbf{Thuật toán: }
+
+\begin{center}
+\includegraphics[scale=0.9]{Thuat_toan.jpg}
+\end{center}
+
 \chapter{Kết luận}
+Dưới đây là một số kết quả khi chạy thuật toán để tìm ra phương án đầu tư cho mã cổ phiếu MSFT
+
+\begin{center}
+    \begin{figure}[htp]
+    \begin{center}
+     \includegraphics[scale=.5]{result_1}
+    \end{center}
+    \caption{T = 1280, n = 5, N = 30, m = 5}
+    \end{figure}
+\end{center}
+
+\begin{center}
+    \begin{figure}[htp]
+    \begin{center}
+     \includegraphics[scale=.5]{result_2}
+    \end{center}
+    \caption{T = 1280, n = 5, N = 30, m = 2}
+    \end{figure}
+\end{center}
+
+Nhìn vào 2 hình trên ta có nhận xét rằng để chạy được ra kết quả hình 4.2 thì ta sẽ mất nhiều thời gian hơn( vì cứ 2 ngày ta lại phải luyện lại để tìm w) nhưng lại không cho kết quả kém hơn.
+
+Giải thích cho trường hợp này, ta hiểu rằng mô hình ta đang làm là tại mỗi thời điểm luyện, ta sẽ tìm w để sao cho nếu hôm trước ta dùng w này để đưa ra chiến lược đầu tư thì sẽ có sharpe cao nhất. Và ta sẽ dùng w đã tìm được để đưa ra chiến lược đầu tư cho các ngày tiếp theo với hi vọng là xu hướng các ngày sau tiếp theo không thay đổi nhiều về xu hướng. 
+
+Tuy nhiên, việc này lại thường xuyên xảy ra vì giá của một cổ phiếu còn phụ thuộc vào rất nhiều nguyên nhân. Nếu ta cứ cố tối ưu tại mỗi thời điểm thì sẽ dễ dẫn đến hiện trạng overfit.
+
+Ngoài ra, ta có thể thấy việc chọn các giá trị n, N nên là bội của 5. Bởi lẽ, thị trường chứng khoán hoạt động 5 ngày/tuần nên việc sử dụng những con số này sẽ rất có ý nghĩa về mặt thực tế để tìm qui luật của giá chứng khoán.
+
+
 \newpage
 \addcontentsline{toc}{chapter}{{Danh mục công trình công bố của tác giả}}
-\chapter*{Danh mục công trình công bố của tác giả}
+\chapter*{Tiệu tham khảo}
 \begin{flushleft}
 
+\quad $[1]$\ Pierpaolo G. Necchi: \textit{ Reinforcement Learning For Automated Trading}
 
-
-\quad $[1]$\ Vũ Thu Thảo, Nguyễn Ngọc Doanh, Nguyễn Nhị Gia Vinh, Nguyễn Thị\\\quad \quad \   Ngọc
-Anh, \textit{"Mô hình hóa ảnh hưởng phân bố không gian của hoa diệt rầy\\ \quad \quad \  tới
-sự phát triển của rầy nâu hại lúa"}, Tạp chí Khoa học và Công nghệ -\\\quad \quad \  Đại học Thái Nguyên, 2015, pp.119-123.\\
+\quad $[2]$\ CS229 Application Project
+Gabriel Molina, SUID 5055783: \textit{ Stock Trading with Recurrent Reinforcement
+Learning (RRL)}
 \end{flushleft}
-\newpage
-\addcontentsline{toc}{chapter}{{Tài liệu tham khảo}}
-\bibliographystyle{amsplain}
-\thispagestyle{empty}
-\bibliography{science}
 \end{document}

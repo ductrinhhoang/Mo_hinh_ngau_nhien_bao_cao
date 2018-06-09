@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.6.3)  8 JUN 2018 16:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.6.3)  9 JUN 2018 23:34
 entering extended mode
 **./nnnn.tex
 (nnnn.tex
@@ -706,7 +706,11 @@ Package: amsthm 2015/03/04 v2.20.2
 \dth@everypar=\toks32
 )
 \c@theorem=\count108
- (nnnn.aux)
+ (nnnn.aux
+
+LaTeX Warning: Label `refhinh1' multiply defined.
+
+)
 \openout1 = `nnnn.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -819,22 +823,22 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 53.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 54.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 53.
+LaTeX Font Info:    Try loading font information for U+msa on input line 54.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 53.
+LaTeX Font Info:    Try loading font information for U+msb on input line 54.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 53.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 54.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
@@ -842,17 +846,17 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 <logobkdentrang.png, id=1, 60.97781pt x 87.32625pt>
 File: logobkdentrang.png Graphic file (type png)
 <use logobkdentrang.png>
-Package pdftex.def Info: logobkdentrang.png  used on input line 53. on input li
-ne 53.
+Package pdftex.def Info: logobkdentrang.png  used on input line 54. on input li
+ne 54.
 Package pdftex.def Info: Requested size: 48.78229pt x 69.86108pt on input line 
-53.
+54.
 
-Overfull \hbox (2.02336pt too wide) in paragraph at lines 53--55
+Overfull \hbox (2.02336pt too wide) in paragraph at lines 54--56
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--55
+Underfull \hbox (badness 10000) in paragraph at lines 54--56
 
  []
 
@@ -867,84 +871,100 @@ trang.png>] (nnnn.toc)
 
 ]
 Ch\uhorn \ohorn ng 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--74
+
+ []
+
 [3
 
-]
+] [4]
 Ch\uhorn \ohorn ng 2.
+[5
 
-LaTeX Warning: Command \d invalid in math mode on input line 72.
+] [6]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 104.
 
-
-LaTeX Warning: Command \dj invalid in math mode on input line 72.
-
-
-LaTeX Warning: Command \d invalid in math mode on input line 72.
-
-
-LaTeX Warning: Command \` invalid in math mode on input line 72.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 72.
-
-
-LaTeX Warning: Command \` invalid in math mode on input line 72.
-
-Missing character: There is no ¤ in font cmr12!
-Missing character: There is no ë in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no ¡ in font cmr12!
-Missing character: There is no ¼ in font cmr12!
-[4
-
-] [5]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 83.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <14.4> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 83.
- [6] [7]
-[8] [9]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 104.
+ [7] [8]
+[9] [10] [11]
 Ch\uhorn \ohorn ng 3.
-[10
+[12
 
-] [11] [12] [13] [14]
+] [13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 284--285
+
+ []
+
+[15] [16]
+<Thuat_toan.jpg, id=74, 506.6428pt x 566.86781pt>
+File: Thuat_toan.jpg Graphic file (type jpg)
+<use Thuat_toan.jpg>
+Package pdftex.def Info: Thuat_toan.jpg  used on input line 368. on input line 
+368.
+Package pdftex.def Info: Requested size: 455.97432pt x 510.17632pt on input lin
+e 368.
+ [17 <./Thuat_toan.jpg>]
 Ch\uhorn \ohorn ng 4.
-[15
+<result_1.png, id=78, 872.50969pt x 469.755pt>
+File: result_1.png Graphic file (type png)
+<use result_1.png>
+Package pdftex.def Info: result_1.png  used on input line 377. on input line 37
+7.
+Package pdftex.def Info: Requested size: 436.25378pt x 234.87692pt on input lin
+e 377.
+<result_2.png, id=80, 896.59969pt x 468.24937pt>
+File: result_2.png Graphic file (type png)
+<use result_2.png>
+Package pdftex.def Info: result_2.png  used on input line 386. on input line 38
+6.
+Package pdftex.def Info: Requested size: 448.29875pt x 234.1241pt on input line
+ 386.
+[18
 
-] [16
+ <./result_1.png>] [19 <./result_2.png>] [20] [21
 
-]
-No file nnnn.bbl.
-(nnnn.aux) ) 
+] (nnnn.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4164 strings out of 493312
- 53817 string characters out of 3138900
- 118282 words of memory out of 3000000
- 7601 multiletter control sequences out of 15000+200000
- 16676 words of font info for 41 fonts, out of 3000000 for 9000
+ 4213 strings out of 493312
+ 54547 string characters out of 3138900
+ 118332 words of memory out of 3000000
+ 7643 multiletter control sequences out of 15000+200000
+ 25124 words of font info for 70 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,13n,27p,977b,307s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\vntex\vnr
-\dpi720\vnti12.pk> <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\vnt
-ex\vnr\dpi1037\vnbx12.pk> <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
-our\vntex\vnr\dpi1493\vnbx12.pk> <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\fonts
-\pk\ljfour\vntex\vnr\dpi720\vnr12.pk> <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\
-fonts\pk\ljfour\vntex\vnr\dpi1792\vnbx12.pk> <C:\Users\DucTH\AppData\Local\MiKT
-eX\2.9\fonts\pk\ljfour\vntex\vnr\dpi864\vnbx12.pk> <C:\Users\DucTH\AppData\Loca
-l\MiKTeX\2.9\fonts\pk\ljfour\vntex\vnr\dpi720\vnbx12.pk><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on nnnn.pdf (16 pages, 293855 bytes).
+ 41i,13n,27p,975b,321s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\vntex\vnr\dpi732\vn
+r17.pk> <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\vntex\vnr\dpi1
+037\vnbx12.pk> <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\vntex\v
+nr\dpi720\vnti12.pk> <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\v
+ntex\vnr\dpi1493\vnbx12.pk> <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\fonts\pk\l
+jfour\vntex\vnr\dpi720\vnr12.pk> <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\fonts
+\pk\ljfour\vntex\vnr\dpi1792\vnbx12.pk> <C:\Users\DucTH\AppData\Local\MiKTeX\2.
+9\fonts\pk\ljfour\vntex\vnr\dpi600\vnbx12.pk> <C:\Users\DucTH\AppData\Local\MiK
+TeX\2.9\fonts\pk\ljfour\vntex\vnr\dpi864\vnbx12.pk> <C:\Users\DucTH\AppData\Loc
+al\MiKTeX\2.9\fonts\pk\ljfour\vntex\vnr\dpi720\vnbx12.pk><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr1
+2.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/symbols/msbm10.pfb>
+Output written on nnnn.pdf (21 pages, 562752 bytes).
 PDF statistics:
- 488 PDF objects out of 1000 (max. 8388607)
+ 573 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
