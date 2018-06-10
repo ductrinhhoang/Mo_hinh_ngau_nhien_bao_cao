@@ -6,8 +6,8 @@
     "max_loop_count": 100,
     "num_day_get": 1280,
     "num_day_in_state": 5,
-    "num_day_for_train": 30,
-    "num_day_for_trade": 2,
+    "num_day_for_train": 20,
+    "num_day_for_trade": 5,
     "eps_for_cal_diff": 0.1,
     "eps_for_exit_loop": 0.005
 }

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.6.3)  9 JUN 2018 23:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.6.3)  10 JUN 2018 09:21
 entering extended mode
 **./nnnn.tex
 (nnnn.tex
@@ -706,11 +706,7 @@ Package: amsthm 2015/03/04 v2.20.2
 \dth@everypar=\toks32
 )
 \c@theorem=\count108
- (nnnn.aux
-
-LaTeX Warning: Label `refhinh1' multiply defined.
-
-)
+ (nnnn.aux)
 \openout1 = `nnnn.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -863,26 +859,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--56
 [1
 
 {C:/Users/DucTH/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./logobkden
-trang.png>] (nnnn.toc)
+trang.png>] (nnnn.toc [2
+
+])
 \tf@toc=\write3
 \openout3 = `nnnn.toc'.
 
- [2
-
-]
+ [3]
 Ch\uhorn \ohorn ng 1.
 
 Underfull \hbox (badness 10000) in paragraph at lines 72--74
 
  []
 
-[3
+[4
 
-] [4]
+] [5]
 Ch\uhorn \ohorn ng 2.
-[5
+[6
 
-] [6]
+] [7]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 104.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
@@ -890,81 +886,95 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <14.4> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 104.
- [7] [8]
-[9] [10] [11]
+ [8] [9]
+[10] [11] [12]
 Ch\uhorn \ohorn ng 3.
-[12
+[13
 
-] [13] [14]
+] [14] [15]
 Underfull \hbox (badness 10000) in paragraph at lines 284--285
 
  []
 
-[15] [16]
-<Thuat_toan.jpg, id=74, 506.6428pt x 566.86781pt>
+[16] [17]
+<Thuat_toan.jpg, id=77, 506.6428pt x 566.86781pt>
 File: Thuat_toan.jpg Graphic file (type jpg)
 <use Thuat_toan.jpg>
 Package pdftex.def Info: Thuat_toan.jpg  used on input line 368. on input line 
 368.
 Package pdftex.def Info: Requested size: 455.97432pt x 510.17632pt on input lin
 e 368.
- [17 <./Thuat_toan.jpg>]
+ [18 <./Thuat_toan.jpg>]
 Ch\uhorn \ohorn ng 4.
-<result_1.png, id=78, 872.50969pt x 469.755pt>
-File: result_1.png Graphic file (type png)
-<use result_1.png>
-Package pdftex.def Info: result_1.png  used on input line 377. on input line 37
-7.
+<result_1-1.png, id=81, 872.50969pt x 469.755pt>
+File: result_1-1.png Graphic file (type png)
+<use result_1-1.png>
+Package pdftex.def Info: result_1-1.png  used on input line 384. on input line 
+384.
 Package pdftex.def Info: Requested size: 436.25378pt x 234.87692pt on input lin
-e 377.
-<result_2.png, id=80, 896.59969pt x 468.24937pt>
-File: result_2.png Graphic file (type png)
-<use result_2.png>
-Package pdftex.def Info: result_2.png  used on input line 386. on input line 38
-6.
+e 384.
+<result_1-2.png, id=83, 896.59969pt x 468.24937pt>
+File: result_1-2.png Graphic file (type png)
+<use result_1-2.png>
+Package pdftex.def Info: result_1-2.png  used on input line 388. on input line 
+388.
 Package pdftex.def Info: Requested size: 448.29875pt x 234.1241pt on input line
- 386.
-[18
+ 388.
+[19
 
- <./result_1.png>] [19 <./result_2.png>] [20] [21
+] [20] [21 <./result_1-1.png> <./result_1-2.png>]
+Overfull \hbox (1.80739pt too wide) in paragraph at lines 402--402
+[]\T5/cmr/bx/n/20.74 Vi»c luy»n nhi·u b¬ng nhi·u dú li»u ch÷a
+ []
 
-] (nnnn.aux)
+File: result_1-1.png Graphic file (type png)
+<use result_1-1.png>
+Package pdftex.def Info: result_1-1.png  used on input line 413. on input line 
+413.
+Package pdftex.def Info: Requested size: 436.25378pt x 234.87692pt on input lin
+e 413.
+<result_2-1.png, id=96, 911.65594pt x 441.90094pt>
+File: result_2-1.png Graphic file (type png)
+<use result_2-1.png>
+Package pdftex.def Info: result_2-1.png  used on input line 417. on input line 
+417.
+Package pdftex.def Info: Requested size: 455.82686pt x 220.94992pt on input lin
+e 417.
+[22] [23 <./result_2-1.png>] [24
 
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+] (nnnn.aux) ) 
 Here is how much of TeX's memory you used:
- 4213 strings out of 493312
- 54547 string characters out of 3138900
- 118332 words of memory out of 3000000
- 7643 multiletter control sequences out of 15000+200000
+ 4217 strings out of 493312
+ 54646 string characters out of 3138900
+ 118282 words of memory out of 3000000
+ 7646 multiletter control sequences out of 15000+200000
  25124 words of font info for 70 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,13n,27p,975b,321s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\vntex\vnr\dpi732\vn
-r17.pk> <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\vntex\vnr\dpi1
-037\vnbx12.pk> <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\vntex\v
-nr\dpi720\vnti12.pk> <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\v
-ntex\vnr\dpi1493\vnbx12.pk> <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\fonts\pk\l
-jfour\vntex\vnr\dpi720\vnr12.pk> <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\fonts
-\pk\ljfour\vntex\vnr\dpi1792\vnbx12.pk> <C:\Users\DucTH\AppData\Local\MiKTeX\2.
-9\fonts\pk\ljfour\vntex\vnr\dpi600\vnbx12.pk> <C:\Users\DucTH\AppData\Local\MiK
-TeX\2.9\fonts\pk\ljfour\vntex\vnr\dpi864\vnbx12.pk> <C:\Users\DucTH\AppData\Loc
-al\MiKTeX\2.9\fonts\pk\ljfour\vntex\vnr\dpi720\vnbx12.pk><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr1
-2.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/symbols/msbm10.pfb>
-Output written on nnnn.pdf (21 pages, 562752 bytes).
+ 41i,13n,27p,975b,325s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\vntex\v
+nr\dpi732\vnr17.pk> <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\vn
+tex\vnr\dpi1037\vnbx12.pk> <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\fonts\pk\lj
+four\vntex\vnr\dpi720\vnti12.pk> <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\fonts
+\pk\ljfour\vntex\vnr\dpi1493\vnbx12.pk> <C:\Users\DucTH\AppData\Local\MiKTeX\2.
+9\fonts\pk\ljfour\vntex\vnr\dpi720\vnr12.pk> <C:\Users\DucTH\AppData\Local\MiKT
+eX\2.9\fonts\pk\ljfour\vntex\vnr\dpi1792\vnbx12.pk> <C:\Users\DucTH\AppData\Loc
+al\MiKTeX\2.9\fonts\pk\ljfour\vntex\vnr\dpi600\vnbx12.pk> <C:\Users\DucTH\AppDa
+ta\Local\MiKTeX\2.9\fonts\pk\ljfour\vntex\vnr\dpi864\vnbx12.pk> <C:\Users\DucTH
+\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\vntex\vnr\dpi720\vnbx12.pk><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on nnnn.pdf (24 pages, 656621 bytes).
 PDF statistics:
- 573 PDF objects out of 1000 (max. 8388607)
+ 595 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

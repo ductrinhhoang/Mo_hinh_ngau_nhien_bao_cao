@@ -76,9 +76,9 @@ Dựa trên suy nghĩ rằng giá cổ phiếu thay đổi là có quy luật, n
 
 Trong bài này, nhóm em xin trình bày một cách tiếp cận như vậy với phương pháp học tăng cường và sử dụng ý tưởng cốt lõi để tối ưu là phương pháp hướng tăng Gradient. Cụ thể:
 
-$\quad \bullet$ \textit{Chương 2: Trình bày các khái niệm cơ bản về học tăng cường và phương pháp hướng tăng Gradient}
+$\quad \bullet$ \textit{Chương 2: Các khái niệm cơ bản về học tăng cường và phương pháp hướng tăng Gradient}
 
-$\quad \bullet$ \textit{Chương 3: Trình bày cách ứng dụng vào đầu tư chứng khoán}
+$\quad \bullet$ \textit{Chương 3: Cách ứng dụng vào đầu tư chứng khoán}
 
 $\quad \bullet$ \textit{Chương 4: Kết luận và một số kết quả được nhóm rút ra trong quá trình làm}
 
@@ -369,36 +369,57 @@ $\quad \bullet $ {\large $\epsilon$} là sai số chấp nhận trong phương p
 \end{center}
 
 \chapter{Kết luận}
+
 Dưới đây là một số kết quả khi chạy thuật toán để tìm ra phương án đầu tư cho mã cổ phiếu MSFT
 
-\begin{center}
-    \begin{figure}[htp]
-    \begin{center}
-     \includegraphics[scale=.5]{result_1}
-    \end{center}
-    \caption{T = 1280, n = 5, N = 30, m = 5}
-    \end{figure}
-\end{center}
+\section{Không nên quá tập trung vào việc luyện để tìm chiến lược w}
+
+$\quad$Nhìn vào hình 4.1 và 4.2, ta có nhận xét rằng để chạy được ra kết quả hình 4.2 thì ta sẽ mất nhiều thời gian hơn( vì cứ 2 ngày ta lại phải luyện lại để tìm w) nhưng lại không cho kết quả kém hơn.
+
+Giải thích cho trường hợp này, ta hiểu rằng mô hình ta đang làm là tại mỗi thời điểm luyện, ta sẽ tìm w để sao cho nếu hôm trước ta dùng w này để đưa ra chiến lược đầu tư thì sẽ có sharpe cao nhất. Và ta sẽ dùng w đã tìm được để đưa ra chiến lược đầu tư cho các ngày tiếp theo với hi vọng là xu hướng các ngày sau tiếp theo không thay đổi nhiều về xu hướng.
 
 \begin{center}
     \begin{figure}[htp]
     \begin{center}
-     \includegraphics[scale=.5]{result_2}
+     \includegraphics[scale=.5]{result_1-1}
+    \end{center}
+    \caption{T = 1280, n = 5, N = 30, m = 5}
+    \begin{center}
+     \includegraphics[scale=.5]{result_1-2}
     \end{center}
     \caption{T = 1280, n = 5, N = 30, m = 2}
     \end{figure}
-\end{center}
+\end{center} 
 
-Nhìn vào 2 hình trên ta có nhận xét rằng để chạy được ra kết quả hình 4.2 thì ta sẽ mất nhiều thời gian hơn( vì cứ 2 ngày ta lại phải luyện lại để tìm w) nhưng lại không cho kết quả kém hơn.
-
-Giải thích cho trường hợp này, ta hiểu rằng mô hình ta đang làm là tại mỗi thời điểm luyện, ta sẽ tìm w để sao cho nếu hôm trước ta dùng w này để đưa ra chiến lược đầu tư thì sẽ có sharpe cao nhất. Và ta sẽ dùng w đã tìm được để đưa ra chiến lược đầu tư cho các ngày tiếp theo với hi vọng là xu hướng các ngày sau tiếp theo không thay đổi nhiều về xu hướng. 
+\newpage
 
 Tuy nhiên, việc này lại thường xuyên xảy ra vì giá của một cổ phiếu còn phụ thuộc vào rất nhiều nguyên nhân. Nếu ta cứ cố tối ưu tại mỗi thời điểm thì sẽ dễ dẫn đến hiện trạng overfit.
 
 Ngoài ra, ta có thể thấy việc chọn các giá trị n, N nên là bội của 5. Bởi lẽ, thị trường chứng khoán hoạt động 5 ngày/tuần nên việc sử dụng những con số này sẽ rất có ý nghĩa về mặt thực tế để tìm qui luật của giá chứng khoán.
 
-
 \newpage
+
+\section{Việc luyện nhiều bằng nhiều dữ liệu chưa hẳn đưa chiến lược w tốt}
+
+$\quad$Nhìn vào hình 4.3 và 4.4, ta có nhận xét rằng shapre trong 2 hình không có nhiều thay đổi nhưng lợi nhuận thì có( dao động 60.000 và 40.000)
+
+Nguyên nhân dẫn đến sự sai khác này là do thay đổi về N( số dữ liệu dùng để luyện). Có thể giải thích trường hợp này là thông tin về giá vì thay đổi phụ thuộc vào nhiều yếu tố nên qui luật của nó thường xảy ra trong một khoảng thời gian không dài. Vì thế nếu ta chọn khoảng thời gian hơi dài một chút thì sẽ là sự pha tạp của nhiều qui luật. 
+
+Từ nhiều qui luật mà ta lại đúc rút thành một qui luật để áp dụng thì việc đầu tư sẽ không còn đúng đắn nữa.
+
+\begin{center}
+    \begin{figure}[htp]
+    \begin{center}
+     \includegraphics[scale=.5]{result_1-1}
+    \end{center}
+    \caption{T = 1280, n = 5, N = 30, m = 5}
+    \begin{center}
+     \includegraphics[scale=.5]{result_2-1}
+    \end{center}
+    \caption{T = 1280, n = 5, N = 60, m = 5}
+    \end{figure}
+\end{center} 
+
 \addcontentsline{toc}{chapter}{{Danh mục công trình công bố của tác giả}}
 \chapter*{Tiệu tham khảo}
 \begin{flushleft}
