@@ -21,13 +21,16 @@ def get_price(sheet, num_day_get):
     return np.array(price)
 
 
-def get_shapre(RET):
-    shapre = np.array([0])
+def get_sharpe(RET):
+    sharpe = np.array([0])
     for i in range(1, len(RET)):
         A = sum(RET[1:1+i])/(i+1)
         B = RET[1:i+1].dot(RET[1:i+1])/(i+1)
-        shapre = np.append(shapre, math.sqrt(i+1)*A/(math.sqrt(B-A**2)))
-    return shapre
+        if math.sqrt(B - A**2) == 0.0:
+            sharpe = 0.0
+        else:
+            sharpe = np.append(sharpe, math.sqrt(i+1)*A/(math.sqrt(B-A**2)))
+    return sharpe
 
 
 def main():
@@ -70,13 +73,13 @@ def main():
                          max_loop_count, eps_for_cal_diff, eps_for_exit_loop)
         state = np.array([1.0])  # state = [1]
         for i in range(n):
-            state = np.append(state, r[count - i - 1])
+            state = np.append(state, r[count - n + i - 1])
         state = np.append(state, F)
         Ft = math.tanh(w.dot(state))
         F_array = np.append(F_array, Ft)
         # print(len(F_array), count - 1)
         if count < T - 1: # caculate ret at tomorrow
-            ret = SO.Return(F, Ft, r[count])
+            ret = SO.Return(Ft, F, r[count])
             RET = np.append(RET, ret)
         F = Ft
         count += 1
@@ -97,9 +100,9 @@ def main():
 
     plt.subplot(3, 1, 3)
     plt.title("Sharpe")
-    real_shapre = get_shapre(RET)
-    time_series = np.array(range(np.size(real_shapre)))
-    plt.plot(time_series, real_shapre)
+    real_sharpe = get_sharpe(RET)
+    time_series = np.array(range(np.size(real_sharpe)))
+    plt.plot(time_series, real_sharpe)
 
     plt.show()
 

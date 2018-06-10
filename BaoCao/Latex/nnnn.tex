@@ -366,20 +366,19 @@ $\quad \bullet $ {\large $\epsilon$} là sai số chấp nhận trong phương p
 
 Dưới đây là một số kết quả khi chạy thuật toán để tìm ra phương án đầu tư cho mã cổ phiếu MSFT
 
-\section{Không nên quá tập trung vào việc luyện để tìm chiến lược w}
+\section{Liên tục cập nhập chiến lược càng nhiều thì khả năng cho lợi nhuận ổn định càng cao}
 
-$\quad$Nhìn vào hình 4.1 và 4.2, ta có nhận xét rằng để chạy được ra kết quả hình 4.2 thì ta sẽ mất nhiều thời gian hơn( vì cứ 2 ngày ta lại phải luyện lại để tìm w) nhưng lại không cho kết quả kém hơn.
+$\quad$Nhìn vào hình 4.1 và 4.2, ta có nhận xét rằng để chạy được ra kết quả hình 4.2 thì ta sẽ mất nhiều thời gian hơn( vì cứ 2 ngày ta lại phải luyện lại để tìm w) nhưng đồng thời cũng cho kết quả tốt hơn.
 
-Giải thích cho trường hợp này, ta hiểu rằng mô hình ta đang làm là tại mỗi thời điểm luyện, ta sẽ tìm w để sao cho nếu hôm trước ta dùng w này để đưa ra chiến lược đầu tư thì sẽ có sharpe cao nhất. Và ta sẽ dùng w đã tìm được để đưa ra chiến lược đầu tư cho các ngày tiếp theo với hi vọng là xu hướng các ngày sau tiếp theo không thay đổi nhiều về xu hướng.
-
+Vấn đề này không có gì là khó hiểu bởi lẽ, giá của cổ phiểu sẽ biến động theo một chu kì không dài vì nó thường xuyên ảnh hưởng bởi các yếu tố bên ngoài( chia cổ tức, công ty ra báo cáo tài chính).
 \begin{center}
     \begin{figure}[htp]
     \begin{center}
-     \includegraphics[scale=.5]{result_1-1}
+     \includegraphics[scale=.4]{result_1-1}
     \end{center}
     \caption{T = 1280, n = 5, N = 30, m = 5}
     \begin{center}
-     \includegraphics[scale=.5]{result_1-2}
+     \includegraphics[scale=.4]{result_1-2}
     \end{center}
     \caption{T = 1280, n = 5, N = 30, m = 2}
     \end{figure}
@@ -387,28 +386,31 @@ Giải thích cho trường hợp này, ta hiểu rằng mô hình ta đang làm
 
 \newpage
 
-Tuy nhiên, việc này lại thường xuyên xảy ra vì giá của một cổ phiếu còn phụ thuộc vào rất nhiều nguyên nhân. Nếu ta cứ cố tối ưu tại mỗi thời điểm thì sẽ dễ dẫn đến hiện trạng overfit.
+Cũng vì lẽ chu kì này xảy ra ngắn nên nếu ta áp dụng một chiến thuật được xây dựng chưa cập nhập được xu thế của giá thì việc đầu tư sẽ khó mà gặp thuận lợi được.
+
+Vì vậy, kết luận thứ nhất mà nhóm đưa ra là càng liên tục chiến thuật theo xu hướng của giá thì khả năng cho lợi nhuận ổn định càng cao.
 
 Ngoài ra, ta có thể thấy việc chọn các giá trị n, N nên là bội của 5. Bởi lẽ, thị trường chứng khoán hoạt động 5 ngày/tuần nên việc sử dụng những con số này sẽ rất có ý nghĩa về mặt thực tế để tìm qui luật của giá chứng khoán.
 
 \newpage
 
-\section{Việc luyện nhiều bằng nhiều dữ liệu chưa hẳn đưa chiến lược w tốt}
+\section{Việc luyện nhiều bằng nhiều dữ liệu chưa hẳn đưa chiến lược w không tốt}
 
-$\quad$Nhìn vào hình 4.3 và 4.4, ta có nhận xét rằng shapre trong 2 hình không có nhiều thay đổi nhưng lợi nhuận thì có( dao động 60.000 và 40.000)
+$\quad$Nhìn vào hình 4.3 và 4.4, ta có nhận xét rằng lợi nhuận trong hình 4.3 nhiều hơn không lại có sharpe thấp hơn
 
-Nguyên nhân dẫn đến sự sai khác này là do thay đổi về N( số dữ liệu dùng để luyện). Có thể giải thích trường hợp này là thông tin về giá vì thay đổi phụ thuộc vào nhiều yếu tố nên qui luật của nó thường xảy ra trong một khoảng thời gian không dài. Vì thế nếu ta chọn khoảng thời gian hơi dài một chút thì sẽ là sự pha tạp của nhiều qui luật. 
+Việc này đi ngược với xu hướng chứng khoán thông thường vì giá cổ phiếu được thay đổi liên tục và không thể xảy ra trong thời gian dài được. 
 
-Từ nhiều qui luật mà ta lại đúc rút thành một qui luật để áp dụng thì việc đầu tư sẽ không còn đúng đắn nữa.
+Vì thế, ta thường luyện mô hình trong không quá dài. Tuy nhiên, việc này cũng không hẳn là đúng vì con số 60 cũng rất có ý nghĩa. Bởi lẽ, theo chu kì một quí( 60 ngày do thị trường chứng khoán hoạt động 5 ngày/ tuần) thì các công ti sẽ ra các báo cáo tài chính
 
+Tóm lại, trong trường hợp này, kết luận của nhóm là không hẳn dữ liệu càng nhiều thì càng không cho mô hình tốt
 \begin{center}
     \begin{figure}[htp]
     \begin{center}
-     \includegraphics[scale=.5]{result_1-1}
+     \includegraphics[scale=.4]{result_1-1}
     \end{center}
     \caption{T = 1280, n = 5, N = 30, m = 5}
     \begin{center}
-     \includegraphics[scale=.5]{result_2-1}
+     \includegraphics[scale=.4]{result_2-1}
     \end{center}
     \caption{T = 1280, n = 5, N = 60, m = 5}
     \end{figure}

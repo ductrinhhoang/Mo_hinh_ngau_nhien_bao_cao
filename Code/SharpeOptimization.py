@@ -17,14 +17,13 @@ def Sharpe(w, r, N, first_date):
     A = 0.0
     B = 0.0
     n = np.size(w) - 2  # n+2 size of w
-    f = np.array([])
     state = np.array([1.0])  # state = [1]
     for i in range(n):
         state = np.append(state, r[first_date + i])
     state = np.append(state, 0.0)
-    for i in range(N - n):
+    for i in range(N - n - 1):
         F = math.tanh(w.dot(state))
-        ret = Return(F, state[n + 1], r[first_date + n + i])
+        ret = Return(F, state[n + 1], r[first_date + n + i + 1])
         A += ret
         B += ret * ret
         state = np.delete(state, n + 1)
@@ -33,15 +32,15 @@ def Sharpe(w, r, N, first_date):
         state = np.delete(state, 0)
         state = np.delete(state, 0)
         state = np.insert(state, 0, 1.0)
-    A = A/(N - n)
-    B = B/(N - n)
+    A = A/(N - n - 1)
+    B = B/(N - n - 1)
     if math.sqrt(B - A * A) == 0.0:
         S = 0.0
     else:
         S = A / math.sqrt(B - A * A)
-    y = np.array([])
-    for i in range(np.size(f)):
-        y = np.append(y, i)
+#    y = np.array([])
+#    for i in range(np.size(f)):
+#        y = np.append(y, i)
 #    plt.gcf().clear()
     return S
 
@@ -49,9 +48,9 @@ def Sharpe(w, r, N, first_date):
 def findW(w, r, N, first_date, alpha, max_loop_count, eps_for_cal_diff, eps_for_exit_loop):
     n = np.size(w) - 2
     for k in range(max_loop_count):
-        e = np.array([0.0] * (n + 2))
         dS = np.array([])
         for i in range(n + 2):
+            e = np.array([0.0] * (n + 2))
             e[i] = eps_for_cal_diff
             S1 = Sharpe(w + e, r, N, first_date)
             S2 = Sharpe(w - e, r, N, first_date)
