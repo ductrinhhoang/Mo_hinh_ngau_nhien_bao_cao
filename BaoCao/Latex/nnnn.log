@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.6.3)  10 JUN 2018 09:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.6.3)  10 JUN 2018 11:37
 entering extended mode
 **./nnnn.tex
 (nnnn.tex
@@ -892,55 +892,55 @@ Ch\uhorn \ohorn ng 3.
 [13
 
 ] [14] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 284--285
+Underfull \hbox (badness 10000) in paragraph at lines 278--279
 
  []
 
 [16] [17]
-<Thuat_toan.jpg, id=77, 506.6428pt x 566.86781pt>
+<Thuat_toan.jpg, id=76, 506.6428pt x 566.86781pt>
 File: Thuat_toan.jpg Graphic file (type jpg)
 <use Thuat_toan.jpg>
-Package pdftex.def Info: Thuat_toan.jpg  used on input line 368. on input line 
-368.
+Package pdftex.def Info: Thuat_toan.jpg  used on input line 362. on input line 
+362.
 Package pdftex.def Info: Requested size: 455.97432pt x 510.17632pt on input lin
-e 368.
- [18 <./Thuat_toan.jpg>]
+e 362.
+ [18] [19 <./Thuat_toan.jpg>]
 Ch\uhorn \ohorn ng 4.
-<result_1-1.png, id=81, 872.50969pt x 469.755pt>
+<result_1-1.png, id=85, 872.50969pt x 469.755pt>
 File: result_1-1.png Graphic file (type png)
 <use result_1-1.png>
-Package pdftex.def Info: result_1-1.png  used on input line 384. on input line 
-384.
+Package pdftex.def Info: result_1-1.png  used on input line 378. on input line 
+378.
 Package pdftex.def Info: Requested size: 436.25378pt x 234.87692pt on input lin
-e 384.
-<result_1-2.png, id=83, 896.59969pt x 468.24937pt>
+e 378.
+<result_1-2.png, id=87, 896.59969pt x 468.24937pt>
 File: result_1-2.png Graphic file (type png)
 <use result_1-2.png>
-Package pdftex.def Info: result_1-2.png  used on input line 388. on input line 
-388.
+Package pdftex.def Info: result_1-2.png  used on input line 382. on input line 
+382.
 Package pdftex.def Info: Requested size: 448.29875pt x 234.1241pt on input line
- 388.
-[19
+ 382.
+[20
 
-] [20] [21 <./result_1-1.png> <./result_1-2.png>]
-Overfull \hbox (1.80739pt too wide) in paragraph at lines 402--402
+] [21] [22 <./result_1-1.png> <./result_1-2.png>]
+Overfull \hbox (1.80739pt too wide) in paragraph at lines 396--396
 []\T5/cmr/bx/n/20.74 Vi»c luy»n nhi·u b¬ng nhi·u dú li»u ch÷a
  []
 
 File: result_1-1.png Graphic file (type png)
 <use result_1-1.png>
-Package pdftex.def Info: result_1-1.png  used on input line 413. on input line 
-413.
+Package pdftex.def Info: result_1-1.png  used on input line 407. on input line 
+407.
 Package pdftex.def Info: Requested size: 436.25378pt x 234.87692pt on input lin
-e 413.
-<result_2-1.png, id=96, 911.65594pt x 441.90094pt>
+e 407.
+<result_2-1.png, id=99, 911.65594pt x 441.90094pt>
 File: result_2-1.png Graphic file (type png)
 <use result_2-1.png>
-Package pdftex.def Info: result_2-1.png  used on input line 417. on input line 
-417.
+Package pdftex.def Info: result_2-1.png  used on input line 411. on input line 
+411.
 Package pdftex.def Info: Requested size: 455.82686pt x 220.94992pt on input lin
-e 417.
-[22] [23 <./result_2-1.png>] [24
+e 411.
+[23] [24 <./result_2-1.png>] [25
 
 ] (nnnn.aux) ) 
 Here is how much of TeX's memory you used:
@@ -950,7 +950,7 @@ Here is how much of TeX's memory you used:
  7646 multiletter control sequences out of 15000+200000
  25124 words of font info for 70 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,13n,27p,975b,325s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,13n,27p,981b,325s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\vntex\v
 nr\dpi732\vnr17.pk> <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\vn
 tex\vnr\dpi1037\vnbx12.pk> <C:\Users\DucTH\AppData\Local\MiKTeX\2.9\fonts\pk\lj
@@ -972,7 +972,7 @@ C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2
 .9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on nnnn.pdf (24 pages, 656621 bytes).
+Output written on nnnn.pdf (25 pages, 655841 bytes).
 PDF statistics:
  595 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

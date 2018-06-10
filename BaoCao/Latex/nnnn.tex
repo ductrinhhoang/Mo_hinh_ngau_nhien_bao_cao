@@ -85,12 +85,12 @@ $\quad \bullet$ \textit{Chương 4: Kết luận và một số kết quả đư
 \chapter{Phương pháp}
 \section{Giới thiệu}
 
- Trong ngành khoa học máy tính, học tăng cường (Reinforcement Learning)là một lĩnh vực con của học máy (Machine Learning), nghiên cứu cách thức một tác tử (agent) trong một môi tường nên chọn thực hiện các hành động nào để có được phần thưởng có giá trị lớn nhất về lâu về dài. Các thuật toán học tăng cường cố gắng tìm một chiến lược ánh xạ từ không gian trạng thái tới không gian hành động mà agent nên chọn trong các trạng thái đó.
+ Trong ngành khoa học máy tính, học tăng cường (Reinforcement Learning) là một lĩnh vực con của học máy (Machine Learning), nghiên cứu cách thức một tác tử (agent) trong một môi tường nên chọn thực hiện các hành động nào để có được phần thưởng có giá trị lớn nhất về lâu về dài. Các thuật toán học tăng cường cố gắng tìm một chiến lược ánh xạ từ không gian trạng thái tới không gian hành động mà agent nên chọn trong các trạng thái đó.
  
  
 \section{Quá trình quyết định Markov}
 
- Quá trình quyết định Markov (Markov Decision Processes, ký hiệu là MDP)cung cấp một nền tảng toán học cho việc mô hình hóa việc ra quyết định trong các tình huống mà kết quả là một phần ngẫu niên, một phần dưới sự điều khiển của một người ra quyết định. MDP rất hữu dụng trong việc học một loạt các bài toán tối ưu hóa được giải quyết thông qua quy hoạch động và hocn tăng cường. MDP được biết đến sớm nhất vào những năm 1950 (cf. Bellman 1957).  Một cốt lõi của nghiên cứu về quá trình ra quyết định Markov là từ kết quả của cuốn sách của Ronald A. Howard xuất bản năm 1960, Quy hoạch động và quá trình Markov. Chúng được sử dụng trong rất nhiều các lĩnh vực khác nhau, bao gồm robot, điều khiển tự động,kinh tế, và chế tạo.
+ Quá trình quyết định Markov (Markov Decision Processes, viết tắt là MDP) cung cấp một nền tảng toán học cho việc mô hình hóa việc ra quyết định trong các tình huống mà kết quả là một phần ngẫu nhiên, một phần dưới sự điều khiển của một người ra quyết định. MDP rất hữu dụng trong việc học một loạt các bài toán tối ưu hóa được giải quyết thông qua quy hoạch động và học tăng cường. MDP được biết đến sớm nhất vào những năm 1950 (cf. Bellman 1957).  Một cốt lõi của nghiên cứu về quá trình ra quyết định Markov là từ kết quả của cuốn sách của Ronald A. Howard xuất bản năm 1960, Quy hoạch động và quá trình Markov. Chúng được sử dụng trong rất nhiều các lĩnh vực khác nhau, bao gồm robot, điều khiển tự động, kinh tế, và chế tạo.
  
  Chính xác hơn, một quá trình quyết định Markov là một quá trình điều khiển ngẫu nhiên thời gian rời rạc. Tại mỗi bước thời gian, quá trình này trong một vài trạng thái $s$, và người ra quyết định có thể chọn bất kỳ hành động $a$ nào có hiệu lực trong trạng thái $s$. Quá trình này đáp ứng tại bước thời gian tiếp theo bằng cách di chuyển ngẫu nhiên vào một trạng thái mới $s'$, và đưa ra cho người ra quyết định một phần thưởng tương ứng $R_a (s,s')$
  
@@ -103,119 +103,113 @@ MDP là một quá trình điều khiển ngẫu nhiên thời gian rời rạc.
 \begin{itemize}
  \item  $\mathbb{S}$: không gian các trạng thái
  \item $\mathbb{A}$: không gian các hành động
- \item  $P: \mathbb{S} \times\mathbb{A} \times S\rightarrow \mathbb{R}$: hạt nhân chuyển tiếp Markov
+ \item  $P: \mathbb{S} \times\mathbb{A} \times S\rightarrow \mathbb{R}$: ánh xạ chuyển tiếp Markov
  \item $R: \mathbb{S} \times \mathbb{A}\rightarrow \mathbb{R}$: hàm phần thưởng, $0<\gamma<1$ là hệ số chiết khấu
 \end{itemize}
- Giả sử rằng, tahi thời điểm t, trạng thái $S_t=s$ và agent có hành động $A_t=a$. Khi đó, xác suất của trạng thái $B \in \mathbb{S}$ tại thời điểm $t+1$ được cho bởi công thức:
+ Giả sử rằng, tại thời điểm t, trạng thái $S_t=s$ và agent có hành động $A_t=a$. Khi đó, xác suất của trạng thái $B \subseteq \mathbb{S}$ tại thời điểm $t+1$ được cho bởi công thức:
  
  \begin{center}
- $P(s,a,B)=\mathbb{P} (S_{t+1} \in B|S_t=s,A_t=a)$       (1)
+ $P(s,a,B)=\mathbb{P} (S_{t+1} \in B|S_t=s,A_t=a)$
  \end{center}
  
- Sau quá trình này, agent nhận được một phần thưởng ngẫu nhiên là $R_(t+1)$. Hàm thưởng $R(s,a)$ là phần thưởng thu được khi thực hiện hành động a ở trang thái s
+ Sau quá trình này, agent nhận được một phần thưởng ngẫu nhiên là $R_{t+1}$. Hàm thưởng $R(s,a)$ là phần thưởng thu được khi thực hiện hành động a ở trang thái s
  
  \begin{center}
- $R(s,a)=\mathbb{E}[R_(t+1)|S_t=s,A_t=a]$         (2)
+ $R(s,a)=\mathbb{E}[R_{t+1}|S_t=s,A_t=a]$
  \end{center}
  
- Tại bất kì bước thời gian nào, agent chọn hành động của nó theo một chính sách $\pi: \mathbb{S} \times A \rightarrow \mathbb{R}$ sao cho với mỗi $s \in \mathbb{S},C \rightarrow \pi(s,C)$ là  xác suất phân phối trên $(\mathbb{A},A)$. Do đó, chính sách $\pi$ và trạng thái ban đầu $s_0 \in \mathbb{S}$ xác định chuỗi trạng thái - hành đồng - phần thưởng ngẫu nhiên $\{(S_t,A_t,R_{t+1})\}_{t \geq 0}$ với giá trị trên $\mathbb{S} \times \mathbb{A} \times \mathbb{R}$. Trong một không gian vô hạn,hiệu suất của agent thường được tính bằng tổng phần thưởng chiếu khấu thu được sau một chính sách là
+ Tại bất kì bước thời gian nào, agent chọn hành động của nó theo một chiến lược $\pi: \mathbb{S} \times A \rightarrow \mathbb{R}$ sao cho với mỗi $s \in \mathbb{S}$, thì $C \rightarrow \pi(s,C)$ là  xác suất phân phối trên $(\mathbb{A},A)$. Do đó, chiến lược $\pi$ và trạng thái ban đầu $s_0 \in \mathbb{S}$ xác định chuỗi trạng thái - hành động - phần thưởng ngẫu nhiên $\{(S_t,A_t,R_{t+1})\}_{t \geq 0}$ với giá trị trên $\mathbb{S} \times \mathbb{A} \times \mathbb{R}$. Trong một không gian vô hạn, hiệu quả của chiến lược thường được tính bằng tổng phần thưởng thu được là:
  
  \begin{center}
- $G_t=\sum_{t=0}^ {\infty} \gamma ^t R_{t+k+1}$     (3)
+ $G_t=\sum_{k=0}^ {\infty} \gamma ^k R_{t+k+1}$
  \end{center}
  
- Vì phần thưởng này là ngẫu nhiên, agent xem xét giá trị kì vọng của nó, thưởng được gọi là hàm giá trị trạng thái
+ Vì phần thưởng này là ngẫu nhiên, agent xem xét giá trị kì vọng của nó, thường được gọi là hàm giá trị trạng thái
  
  \begin{center}
- $V_ \pi (s)=\mathbb{E}_ \pi [G_t|S_t=s]$         (4) 
+ $V_ \pi (s)=\mathbb{E}_ \pi [G_t|S_t=s]$ 
  \end{center}
  
- Trong đó, chỉ số $\mathbb{E}_ \pi$ chỉ ra rằng xá hành đồng được chọn theo chính sách $\pi$. Hàm giá trị trạng thái được đo tốt khi agent ở trong một trạng thái nhất định và tuân theo một chính sách nhất định. Tương tự, ta có hàm giá trị hành động
+ Trong đó, chỉ số $\pi$ trong $\mathbb{E}_ \pi$ chỉ ra rằng các hành động được chọn theo chiến lược $\pi$. Tương tự, ta có hàm giá trị hành động
  
  \begin{center}
- $Q_ \pi (s,a)= \mathbb{E}_ \pi [G_t|S_t=s,A_t=a]$      (5)
+ $Q_ \pi (s,a)= \mathbb{E}_ \pi [G_t|S_t=s,A_t=a]$
  \end{center}
  
  Ta có mối liên hệ giữa $V_ \pi$ và $Q_ \pi$
  
- \begin{center}
- $V_ \pi (s)= \int _{A} \pi (s,a) Q_ \pi (s,a) da$      (6)
- \end{center}
  
- Hầu như tất cả các thuật toán học tăng cường được thiết kế để tính các hàm giá trị này dựa trên các phương trình Bellman
+ $$V_ \pi (s)= \int _{A} \pi (s,a) Q_ \pi (s,a) da$$
  
- \begin{center}
- $V_ {\pi} (s)=R_{\pi} (s)+ \gamma T_{\pi}V_{\pi}(s)    $     (7)
- 
- $Q_{\pi}(s,a) = R(s,a)+ \gamma T_a V_ {\pi}(s) $        (8)
- \end{center}
- 
- Khi chúng ta biểu diễn bở $T_a$ thì toán tử chuyển với hành đồng a (chính sách $\pi$)
+ Ta xét phương trình Bellman:
  
  \begin{center}
- $T_s F(s)=\mathbb{E}[F(S_{t+1} |S_t = s,A_t =a]= \int _{S} P(s,a,s') F(s') ds'$  (9)
+ $V_ {\pi} (s)=R_{\pi} (s)+ \gamma T_{\pi}V_{\pi}(s)    $
  
- $T_ \pi F(s)= \mathbb{E}_ pi [F(S_{t+1} |S_t = s]= \int _{\mathbb{A} } \pi (s,a) \int _{\mathbb{S}} P(s,a,a') F(s') F(s') ds' da$  (10)
+ $Q_{\pi}(s,a) = R(s,a)+ \gamma T_a V_ {\pi}(s) $
  \end{center}
  
- Các phương trình này có thể được viết dưới dạng phương trình điểm cố định tho một số giả thuyết về hàm thưởng, thừa nhận một giải pháp duy nhất theo định lý ánh xạ co. Mục tiêu của agent là chọn một chính sách $\pi_{*}$ mà tối đa hóa được lợi nhuận ở tất cả các trạng thái có thể. Chính sách như vậy được gọi là tối ưu và các hàm giá trị (sửa lỗi) được gọi là hàm giá trị trạng thái tối ưu
+ Trong đó $T_a$ ($T_\pi$) là toán tử chuyển với hành động a (chiến lược $\pi$):
  
- \begin{center}
- $V_{*} (s)= \sup_{\pi} V_\pi (s)$  (11)
- \end{center}
+$$
+ T_a F(s)=\mathbb{E}\left[F(S_{t+1} |S_t = s,A_t =a)\right]= \int _{S} P(s,a,s') F(s') ds'
+ $$
+$$ T_ \pi F(s)= \mathbb{E}_ \pi [F(S_{t+1} |S_t = s)]= \int _{\mathbb{A} } \pi (s,a) \int _{\mathbb{S}} P(s,a,a') F(s') ds' da
+ $$
+ 
+ Các phương trình này có thể được viết dưới dạng phương trình điểm bất động với một số giả thuyết về hàm thưởng, có duy nhất nghiệm theo định lý ánh xạ co. Mục tiêu của agent là chọn một chiến lược $\pi_{*}$ mà tối ưu hóa được lợi nhuận. Chính sách như vậy được gọi là tối ưu và hàm giá trị của nó được gọi là hàm giá trị trạng thái tối ưu
+ 
+$$
+ V_{*} (s)= \sup_{\pi} V_\pi (s)
+ $$
  
  và hàm tối ưu giá trị-hành động
  
- \begin{center}
- $Q_{*}(s,a)= \sup _\pi Q_\pi (s,a)$ (12)
- \end{center}
  
- Các hàm giá trị tối ưu thỏa mãn phương trình Bellman sau
+ $$Q_{*}(s,a)= \sup _\pi Q_\pi (s,a)$$
  
- \begin{center}
- $V_* (s)= \sup _a Q_* (s,a)=\sup _a {R(s,a)+\gamma T_a V_* (s)}$ (13)
+ Các hàm giá trị tối ưu thỏa mãn phương trình Bellman như sau:
  
- $Q_*(s,a)=R(s,a)+\gamma T_a V_* (s)$ (14)
- 
- $=R(s,a)+\gamma \int _{\mathbb{S}}P(s,a,s') \sup _{a'} Q_*(s',a')ds$
-\end{center}
 
-Một lần nữa, đây là những phương trình điểm cố định mà luôn tồn tại và duy nhất một giải pháp do định lý ánh xạ co. Với hàm giá trị trạng thái tối ưu $Q_*$. Một chính sách tối ưu thu được bằng cách chọn mỗi trạng thái hành động với giá trị lớn nhất $Q_*$
+ $$V_* (s)= \sup _a Q_* (s,a)=\sup _a {R(s,a)+\gamma T_a V_* (s)}$$
+ 
+ $$Q_*(s,a)=R(s,a)+\gamma T_a V_* (s)=R(s,a)+\gamma \int _{\mathbb{S}}P(s,a,s') \sup _{a'} Q_*(s',a')ds$$
 
-\begin{center}
-$a_*$ = $argsup_{a}$  $Q_*(s,a)$ (15)
-\end{center}
+Một lần nữa, đây là những phương trình điểm bất động mà luôn tồn tại và duy nhất nghiệm theo định lý ánh xạ co. Với hàm giá trị trạng thái tối ưu $Q_*$, một chiến lược tối ưu thu được bằng cách chọn hành động với mỗi trạng thái sao cho giá trị lớn nhất $Q_*$
 
-Chính sách tham lam này được xác định và chỉ phụ thuộc vào trạng thái hiện tại của hệ thống
+
+$$a_* = \underset{a}{argsup} Q_*(s,a)$$
+
+Chiến lược tham lam này được xác định và chỉ phụ thuộc vào trạng thái hiện tại của hệ thống.
 
 \section{Phương pháp Gradient Ascent}
-Trong Machine Learning nói riêng và Toán Tối Ưu nói chung, chúng ta thường xuyên phải tìm giá trị lớn nhất (hoặc đôi khi là nhỏ nhất) của một hàm số nào đó.
+Trong Machine Learning và Toán Tối Ưu, chúng ta thường xuyên phải tìm giá trị lớn nhất (hoặc đôi khi là nhỏ nhất) của một hàm số nào đó.
 
-Nhìn chung, việc tìm giá trị tối ưu toàn cục của các hàm mục tiêu trong Machine Learning là rất phức tạp, thậm chí là bất khả thi. Thay vào đó, người ta sẽ cố gắng tìm các điểm tối ưu địa phương của bài toán.
+Nhìn chung, việc tìm giá trị tối ưu toàn cục của các hàm mục tiêu trong Machine Learning là rất phức tạp, thậm chí là bất khả thi về mặt thời gian. Thay vào đó, người ta sẽ cố gắng tìm các điểm tối ưu địa phương của bài toán.
 
-Ta đã biết, $x^*$ là nghiệm tối ưu địa phương bài toán max f(x) v.đ.k x $\in$ $\mathbb{R}^n$ thì $x^*$ là nghiệm của phương trình $\nabla f(x)$ = 0. Để tính được nghiệm tối ưu toàn cục, ta có thể tính tất cả các nghiệm của phương trình $\nabla f(x)$ = 0. Tuy nhiên, việc này đa số cũng là bất khả thi vì có thể sự phức tạp của đạo hàm hoặc dữ liệu có số chiều lớn làm ta không thể tìm được nghiệm.
+Ta đã biết, $x^*$ là nghiệm tối ưu địa phương bài toán $max f(x)$ v.đ.k (với điều kiện) $x\in\mathbb{R}^n$ thì $x^*$ là nghiệm của phương trình $\nabla f(x)$ = 0. Để tính được nghiệm tối ưu toàn cục, ta có thể tính tất cả các nghiệm của phương trình $\nabla f(x) = 0$. Tuy nhiên, việc này đa số cũng là bất khả thi vì có thể sự phức tạp của đạo hàm hoặc dữ liệu có số chiều lớn làm ta không thể tìm được nghiệm.
 
 Hướng tiếp cận phổ biến nhất là xuất phát từ một điểm mà chúng ta coi là gần với nghiệm của bài toán, sau đó dùng một phép toán lặp để tiến dần đến điểm cần tìm, tức đến khi đạo hàm gần với 0
 
-Theo lí thuyết qui hoạch phi tuyến trong Toán Tối ưu, ta biết rằng từ một điểm $u \in \mathbb{R}^n$ thì $\nabla f(u)$ chính là hướng tăng của f(x) tại u. Tức là, $\exists \epsilon >0$ thỏa mãn: f(u) $\leq$ f(u+$\delta.\nabla f(u)$), $\forall \delta \in (0, \epsilon)$
+Theo lí thuyết qui hoạch phi tuyến trong Toán Tối ưu, ta biết rằng từ một điểm $u \in \mathbb{R}^n$ thì $\nabla f(u)$ chính là hướng tăng (nhanh nhất) của hàm $f(x)$ tại $u$. Tức là, $\exists \epsilon >0$ thỏa mãn: $f(u) \leq f(u+\delta. \nabla f(u)), \forall \delta \in (0, \epsilon)$
 
-Xuất phát từ ý tưởng này, ta sẽ triển khai để xây dựng một dãy $(x^n)_{n=0}^{\infty}$ sao cho $lim$ $ x^n \rightarrow x^*$ khi n $\rightarrow \infty$
+Xuất phát từ ý tưởng này, ta sẽ triển khai để xây dựng một dãy $(x^n)_{n=0}^{\infty}$ sao cho $lim$ $ x^n \rightarrow x^*$ khi $n \rightarrow \infty$
 
-$\quad$ B0: Chọn $x^0 \in \mathbb{R}^n$, $\epsilon >0$, $\eta > 0$, gán k := 0, N > 1, n = 1
+$\quad$ B0: Chọn $x^0 \in \mathbb{R}^n$, $\epsilon >0$, $\eta > 0$, gán $k := 0, N > 1$
 
-$\quad$ B1: Nếu $\nabla f(x^k) \approx 0$. Chọn x đủ gần $x^k$ và kiểm tra f(x) - f($x^k$).
+$\quad$ B1: Nếu $\nabla f(x^k) \approx 0$. Chọn $x$ đủ gần $x^k$ và kiểm tra $f(x) - f(x^k)$.
  
-$\quad \quad \bullet$ Nếu f(x) - f($x^k) \leq$   0. Gán $x^* = x^k$ chuyển sang B3
+$\quad \quad \bullet$ Nếu $f(x) - f(x^k) \leq$   0. Gán $x^* = x^k$ chuyển sang B3
 
 $\quad \quad \bullet$ Ngược lại. Chuyển sang B2
 
-$\quad$ B2: n := n+1. 
+$\quad$ B2: 
 
-$\quad \quad \bullet$ Nếu n = N hoặc $|f(x^k + \eta.\nabla f(x^k)) - f(x^k)| < \epsilon$ thì gán $x^* = x^k$ và chuyển sang B3.
+$\quad \quad \bullet$ Nếu $k = N$ hoặc $|f(x^k + \eta.\nabla f(x^k)) - f(x^k)| < \epsilon$ thì gán $x^* = x^k$ và chuyển sang B3.
 
-$\quad \quad \bullet$ Ngược lại, gán $x^k = x^k + \eta.f(x^k)$ rồi quay lại B1
+$\quad \quad \bullet$ Ngược lại, gán $x^{k+1} = x^k + \eta.\nabla f(x^k)$, và $k = k+1$ rồi quay lại B1
 
-$\quad$ B3: Thông báo $x*$ và kết thúc chương trình
+$\quad$ B3: Thông báo $x^*$ và kết thúc chương trình
 
 
 
@@ -223,9 +217,9 @@ $\quad$ B3: Thông báo $x*$ và kết thúc chương trình
 
 \section{Hai khái niệm cơ bản}
 
-$\quad \quad \bullet$ \textbf{Long}: Ta nói rằng ta \textbf{long} n cổ phiếu nghĩa là ta sẽ mua n cổ phiếu và hi vọng giá cổ phiếu này sẽ tăng
+\hspace{0.55cm} $ \bullet$ \textbf{Long}: Ta nói rằng ta \textbf{long} n cổ phiếu nghĩa là ta sẽ giữ n cổ phiếu và hi vọng giá cổ phiếu này sẽ tăng.
 
-$\bullet$ \textbf{Short}: Ta nói rằng ta \textbf{short} n cổ phiếu nghĩa là ta sẽ đi vay n cổ phiếu và bán ngay. Với hi vọng giá cổ phiếu sẽ giảm, ta sẽ đợi đến khi nó giảm và mua lại rồi trả cho cổ phiếu cho người cho vay
+$\bullet$ \textbf{Short}: Ta nói rằng ta \textbf{short} n cổ phiếu nghĩa là ta sẽ đi vay n cổ phiếu và bán ngay. Với hi vọng giá cổ phiếu sẽ giảm, ta sẽ đợi đến khi nó giảm và mua lại rồi trả cho cổ phiếu cho người cho vay  (bán khống).
 
 
 \section{Hàm mục tiêu: SHARPE}
@@ -238,7 +232,7 @@ $ S_T=$ {\Large $\frac{Average(R_t)}{Standard \hspace{0.1cm}  Deviation (R_t)}$}
 \end{center}
 
 
-Trong đó, $R_t$ là lợi nhuận đầu tư cho giao dịch tại thời điểm t so với thời điểm t-1. Bằng trực giác, Sharpe thưởng cho các chiến lược đầu tư dựa vào xu hướng ít biến động để tạo ra lợi nhuận.
+Trong đó, $R_t$ là lợi nhuận đầu tư cho giao dịch tại thời điểm $t$ so với thời điểm $t-1$. Bằng trực giác, Sharpe thưởng cho các chiến lược đầu tư dựa vào xu hướng ít biến động để tạo ra lợi nhuận.
 
 \section{Hàm đầu tư}
 
@@ -248,26 +242,26 @@ Nhà đầu tư sẽ cố gắng sao cho Sharpe đạt giá trị lớn nhất c
 $F_t = tanh(w^T x_t)$
 \end{center}
 
-trong đó M là số chuỗi thời gian đầu vào cho nhà đầu tư, tham số $w \in R^{M+2}$, vector đầu vào $x_t=[1,r_t,...,r_{t-M},F_{t-1}]$, và $r_t=p_t - p_{t-1}$, với $p_t$ là giá của cổ phiếu ở thời điểm t
+trong đó M là số chuỗi thời gian đầu vào cho nhà đầu tư, tham số $w \in R^{M+2}$, vector đầu vào $x_t=[1,r_{t-1},...,r_{t-M},F_{t-1}]$, và $r_t=p_t - p_{t-1}$, với $p_t$ là giá của cổ phiếu ở thời điểm $t$
 
-Để ý rằng $r_t$ là sai khác giá trị của cổ phiếu giữa thời điểm hiện tại t và thời điểm trước đó. Vì vậy, $r_t$ là lợi nhuận trên một cổ phiếu được mua ở thời gian $t-1$
+Để ý rằng $r_t$ là sai khác giá trị của cổ phiếu giữa thời điểm hiện tại $t$ và thời điểm trước đó. Vì vậy, $r_t$ là lợi nhuận trên một cổ phiếu được mua ở thời gian $t-1$
 
-Ngoài ra, hàm $F_t \in [-1,1]$ cho biết trường hợp đầu tư tại thời điểm t. Có 3 trường hợp có thể có: long, short, neutral
+Ngoài ra, hàm $F_t \in [-1,1]$ cho biết trường hợp đầu tư tại thời điểm $t$. Có 3 trường hợp có thể có: long, short, neutral
 \begin{itemize}
-\item Long khi $F_t > 0$. Trong trường hợp này, nhà đầu tư mua một cổ phiếu với giá $p_t$ và hi vọng rằng nó tăng giá ở thời điểm $t+1$
-\item Short khi $F_t <0$. Ở trường hợp này, nhà đầu tư bán một cổ phiếu mà họ không sở hữu với giá $p_t$, với kì vọng nó có thể thực hiện giao dịch tại thời điểm $t+1$. Nếu giá cao hơn tại thời điểm $t+1$ thì nhà đầu tư bắt buộc phải mua ở giá cao hơn thời điểm $t+1$ đẻ hoàn thành hợp đồng. Nếu giá ở thời điểm $t+1$ thấp hơm thì nhà đầu tư thu được lợi nhuận.
-\item Neutral khi $F_t=0$. Trong trường hợp này nhà đầu tư không được cũng không mất lợi nhuận.
+\item Long khi $F_t > 0$. Trong trường hợp này, nhà đầu tư giữ một số cổ phiếu với giá $p_t$ một cổ phiếu và hi vọng rằng nó tăng giá ở thời điểm $t+1$
+\item Short khi $F_t <0$. Ở trường hợp này, nhà đầu tư bán một số cổ phiếu mà họ không sở hữu với giá $p_t$ một cổ phiếu, với kì vọng nó có thể thực hiện giao dịch tại thời điểm $t+1$. Nếu giá cao hơn tại thời điểm $t+1$ thì nhà đầu tư bắt buộc phải mua ở giá cao hơn thời điểm $t+1$ để hoàn thành hợp đồng. Nếu giá ở thời điểm $t+1$ thấp hơn thì nhà đầu tư thu được lợi nhuận.
+\item Neutral khi $F_t=0$. Trong trường hợp này nhà đầu tư không giữ cổ phiếu nào, cũng không vay cổ phiếu nào.
 \end{itemize}
 
-Như vậy, $F_t$ cho biết cổ phiếu tại thời điểm t. Đó là $n_t= \mu .F_t$, cổ phiếu được mua (long) hoặc bán (short) với $\mu$ là số lượng cổ phiếu tối đa cho mỗi giao dịch. Lợi nhuận ở thời điểm t phụ thuộc vào $F_{t-1}$:
+Như vậy, $F_t$ cho biết cổ phiếu tại thời điểm $t$. $n_t= \mu .F_t$ là số cổ phiếu được mua (long) hoặc bán (short) với $\mu$ là số lượng cổ phiếu tối đa cho mỗi giao dịch. Lợi nhuận ở thời điểm $t$ phụ thuộc vào $F_{t-1}$:
 
 \begin{center}
-$R_t= \mu (F_{t-1}.r_t- \delta |F_t-F_{t-1}|$
+$R_t= \mu (F_{t}.r_{t+1}- \delta |F_t-F_{t-1}|)$
 \end{center}
 
-trong đó, $\delta$ là chi phí giao dịch tại thời điểm t. Nếu $F_t=F_{t-1}$ (không thay đổi đàu tư trong thời điểm này) thì sẽ không mất phí giao dịch. Nếu không sẽ mất phí tỷ lệ thuận với sự chênh lệch trong cổ phiếu nắm giữ.
+trong đó, $\delta$ là hệ số chi phí giao dịch tại thời điểm $t$. Nếu $F_t=F_{t-1}$ (không thay đổi đầu tư trong thời điểm này) thì sẽ không mất phí giao dịch. Nếu không sẽ mất phí tỷ lệ thuận với sự chênh lệch trong cổ phiếu nắm giữ.
 
-Đầu tiên, $(\mu . F_{t-1} .r_t)$ là kết quả trả về từ quyết định đầu tư tại thời điểm $t-1$. Ví dụ nếu $\mu=20$ cổ phiếu, quyết định mua một nửa mức tối đa cho phép $(F_{t-1}=5)$ và mỗi cổ phiếu tăng $r_t=8$ đơn vị giá, kì hạn này sẽ là 80. tổng lợi nhuận thu được (bỏ qua các khoản phí giao dịch phát sinh ở thời điểm $t$)
+Đầu tiên, $(\mu . F_{t} .r_{t+1})$ là kết quả trả về từ quyết định đầu tư tại thời điểm $t$. Ví dụ nếu $\mu=20$ cổ phiếu, quyết định mua một nửa mức tối đa cho phép $(F_{t}=0.5)$ và mỗi cổ phiếu tăng $r_{t+1}=8$ đơn vị giá, kì hạn này sẽ là 80. tổng lợi nhuận thu được (bỏ qua các khoản phí giao dịch phát sinh ở thời điểm $t$)
 
 \section{Hướng tăng}
 
