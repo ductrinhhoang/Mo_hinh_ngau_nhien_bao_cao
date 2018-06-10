@@ -55,14 +55,14 @@ def main():
     sheet = wb.sheet_by_index(0)
 
     price = get_price(sheet, T+1)
-
-    # y = np.array([])7676y
+#    y = np.array(range(np.size(price)))
+#    plt.plot(y, price)
+#    plt.show()
 
     r = price[1:T] - price[0:T-1]
 
     w = np.array([0] * (n + 2))
 
-    # print(SO.Sharpe(SO.findW(w, r, N, 0), r, N, 0))
     RET = np.array([0])
     F = 0.0  # Ft time -1
     F_array = np.array([])
@@ -73,7 +73,7 @@ def main():
                          max_loop_count, eps_for_cal_diff, eps_for_exit_loop)
         state = np.array([1.0])  # state = [1]
         for i in range(n):
-            state = np.append(state, r[count - n + i - 1])
+            state = np.append(state, r[count - i - 2])
         state = np.append(state, F)
         Ft = math.tanh(w.dot(state))
         F_array = np.append(F_array, Ft)

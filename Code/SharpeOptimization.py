@@ -18,7 +18,7 @@ def Sharpe(w, r, N, first_date):
     B = 0.0
     n = np.size(w) - 2  # n+2 size of w
     state = np.array([1.0])  # state = [1]
-    for i in range(n):
+    for i in range(n - 1, -1, -1):
         state = np.append(state, r[first_date + i])
     state = np.append(state, 0.0)
     for i in range(N - n - 1):
@@ -27,10 +27,10 @@ def Sharpe(w, r, N, first_date):
         A += ret
         B += ret * ret
         state = np.delete(state, n + 1)
-        state = np.append(state, r[first_date + n + i])
+        state = np.delete(state, n)
         state = np.append(state, F)
         state = np.delete(state, 0)
-        state = np.delete(state, 0)
+        state = np.insert(state, 0, r[first_date + n + i])
         state = np.insert(state, 0, 1.0)
     A = A/(N - n - 1)
     B = B/(N - n - 1)

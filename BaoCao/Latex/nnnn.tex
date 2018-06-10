@@ -34,9 +34,9 @@
 \textbf{VIỆN TOÁN ỨNG DỤNG VÀ TIN HỌC}\\
 \textbf{------------------------------------------------------}\\[0.4cm]
 \includegraphics[scale=.8]{logobkdentrang}\\[1.2cm]
-\textbf{{ BÀI TẬP LỚN:}}\\
+\textbf{{ BÀI TẬP LỚN}}\\
 \textbf{{\large ỨNG DỤNG HỌC TĂNG CƯỜNG VÀO}}\\
-\textbf{{\largeĐẦU TƯ CHỨNG KHOÁN}}\\
+\textbf{{\large ĐẦU TƯ CHỨNG KHOÁN}}\\
 \end{center}
 \begin{flushleft}
 \vspace{1.3cm}
@@ -65,9 +65,9 @@
 
 Ngày nay, việc đầu tư chứng khoán là lĩnh vực đầu tư phát triển rất mạnh, thu hút sự quan tâm của không ít các nhà đầu tư trên khắp thế giới. Nhà đầu tư tốt sẽ thu được lợi nhuận kể cả khi giá cổ phiếu có chiều hướng tăng hoặc giảm. Cụ thể:
 
-$\quad \bullet$ Khi cổ phiếu đang có xu hướng tăng, nhà đầu tư sẽ mua cổ phiếu đó trước khi giá tiếp tục tăng và bán trước khi giá sẽ giảm
+$\quad \bullet$ Khi cổ phiếu đang có xu hướng tăng, nhà đầu tư sẽ mua cổ phiếu đó trước khi giá tiếp tục tăng và bán trước khi giá sẽ giảm.
 
-$\quad \bullet$ Khi cổ phiếu đang có xu hướng giảm, nhà đầu tư sẽ đi vay cổ phiếu và lập tức bán đi. Đợi khi giá cổ phiếu giảm đến một mức nào đó, nhà đầu tư sẽ đi mua lại đủ cổ phiếu và trả cho người đã cho vay
+$\quad \bullet$ Khi cổ phiếu đang có xu hướng giảm, nhà đầu tư sẽ đi vay cổ phiếu và lập tức bán đi. Đợi khi giá cổ phiếu giảm đến một mức nào đó, nhà đầu tư sẽ đi mua lại đủ cổ phiếu và trả cho người đã cho vay.
 
 Chiến lược đầu tư rất thông minh phải không? Tuy nhiên vấn đề ở đây là ta biết khi nào giá cổ phiếu đang có xu hướng tăng và khi nào giảm.
 \\ 
@@ -157,22 +157,14 @@ $$
 $$ T_ \pi F(s)= \mathbb{E}_ \pi [F(S_{t+1} |S_t = s)]= \int _{\mathbb{A} } \pi (s,a) \int _{\mathbb{S}} P(s,a,a') F(s') ds' da
  $$
  
- Các phương trình này có thể được viết dưới dạng phương trình điểm bất động với một số giả thuyết về hàm thưởng, có duy nhất nghiệm theo định lý ánh xạ co. Mục tiêu của agent là chọn một chiến lược $\pi_{*}$ mà tối ưu hóa được lợi nhuận. Chính sách như vậy được gọi là tối ưu và hàm giá trị của nó được gọi là hàm giá trị trạng thái tối ưu
- 
+ Các phương trình này có thể được viết dưới dạng phương trình điểm bất động với một số giả thuyết về hàm thưởng, có duy nhất nghiệm theo định lý ánh xạ co. Mục tiêu của agent là chọn một chiến lược $\pi_{*}$ mà tối ưu hóa được lợi nhuận. Chính sách như vậy được gọi là tối ưu và hàm giá trị của nó được gọi là hàm giá trị trạng thái tối ưu 
 $$
  V_{*} (s)= \sup_{\pi} V_\pi (s)
- $$
- 
- và hàm tối ưu giá trị-hành động
- 
- 
- $$Q_{*}(s,a)= \sup _\pi Q_\pi (s,a)$$
- 
+ $$ 
+ và hàm tối ưu giá trị-hành động  
+ $$Q_{*}(s,a)= \sup _\pi Q_\pi (s,a)$$ 
  Các hàm giá trị tối ưu thỏa mãn phương trình Bellman như sau:
- 
-
- $$V_* (s)= \sup _a Q_* (s,a)=\sup _a {R(s,a)+\gamma T_a V_* (s)}$$
- 
+  $$V_* (s)= \sup _a Q_* (s,a)=\sup _a {R(s,a)+\gamma T_a V_* (s)}$$ 
  $$Q_*(s,a)=R(s,a)+\gamma T_a V_* (s)=R(s,a)+\gamma \int _{\mathbb{S}}P(s,a,s') \sup _{a'} Q_*(s',a')ds$$
 
 Một lần nữa, đây là những phương trình điểm bất động mà luôn tồn tại và duy nhất nghiệm theo định lý ánh xạ co. Với hàm giá trị trạng thái tối ưu $Q_*$, một chiến lược tối ưu thu được bằng cách chọn hành động với mỗi trạng thái sao cho giá trị lớn nhất $Q_*$
@@ -263,7 +255,7 @@ trong đó, $\delta$ là hệ số chi phí giao dịch tại thời điểm $t$
 
 Đầu tiên, $(\mu . F_{t} .r_{t+1})$ là kết quả trả về từ quyết định đầu tư tại thời điểm $t$. Ví dụ nếu $\mu=20$ cổ phiếu, quyết định mua một nửa mức tối đa cho phép $(F_{t}=0.5)$ và mỗi cổ phiếu tăng $r_{t+1}=8$ đơn vị giá, kì hạn này sẽ là 80. tổng lợi nhuận thu được (bỏ qua các khoản phí giao dịch phát sinh ở thời điểm $t$)
 
-\section{Hướng tăng}
+\section{Áp dụng phương pháp Gradient Ascent}
 
 Tối đa hóa Sharpe tuân theo hướng tăng. Đầu tiên chúng ta xác định hàm thưởng bằng cách sử dụng công thức cơ bản của thống kê cho kì vọng và phương sai.
 
@@ -275,67 +267,58 @@ $S_T=$ {\Large$\frac{E[R_t]}{\sqrt{E[R_t ^2]-(E[R_t])^2}} =\frac{A}{\sqrt{B-A^2}
 \end{center}
 
 
-\hspace{6cm} ,với $A=${\large $\frac{1}{T} \sum_{t=1}^{T}R_t$ }và $B$= {\large$\frac{1}{T} \sum_{t=1}^{T}R_t^2$} $\newline$
+\hspace{6cm} ,với $A=${\large $\frac{1}{T} \sum\limits_{t=1}^{T}R_t$ }và $B$= {\large$\frac{1}{T} \sum\limits_{t=1}^{T}R_t^2$} $\newline$
 
-Sau đó chúng ta lấy đạo hàm của $S_T$ sử dụng chuỗi:
+Sau đó chúng ta lấy đạo hàm của $S_T$:
+
 {\Large
-\begin{center}
-$\frac{\partial S_T}{\partial w}=\frac{\partial}{\partial w}\left \{ \frac{A}{\sqrt{B-A^2}} \right \}=\frac{dS_T}{dA}.\frac{\partial A}{\partial w}+\frac{dS_T}{dB}.\frac{\partial B}{\partial w}$
+$\frac{d S_T}{dw}=\frac{d}{dw}\left \{ \frac{A}{\sqrt{B-A^2}} \right \}$
+
+$=\frac{dS_T}{dA}\frac{dA}{dw}+\frac{dS_T}{dB}\frac{dB}{dw}$
 
 
-$=\sum_{t=1}^{T} \left\{\frac{dS_T}{dA}.\frac{dA}{dR_t}+\frac{dS_T}{dB}.\frac{dB}{dR_t}\right\}.\frac{\partial R_t}{\partial w}$
+$=\sum\limits_{t=1}^{T} \left\{\frac{dS_T}{dA}\frac{dA}{dR_t}+\frac{dS_T}{dB}\frac{dB}{dR_t}\right\}\frac{dR_t}{dw}$
 
 
-$\hspace{0.5cm} =\sum_{t=1}^{T} \left\{\frac{dS_T}{dA}.\frac{dA}{dR_t}+\frac{dS_T}{dB}.\frac{dB}{dR_t}\right\}. \left\{\frac{dR_t}{dF_t}.\frac{\partial F_t}{\partial w}+\frac{dR_t}{dF_{t-1}} \frac{\partial F_{t-1}}{\partial w}\right\}$
-\end{center}
+$=\sum\limits_{t=1}^{T} \left\{\frac{dS_T}{dA}\frac{dA}{dR_t}+\frac{dS_T}{dB}\frac{dB}{dR_t}\right\}\left\{\frac{dR_t}{dF_t}\frac{dF_t}{dw}+\frac{dR_t}{dF_{t-1}} \frac{dF_{t-1}}{dw}\right\}$
 }
 
 Đạo hàm từng phần, kết quả trả về được hàm:
 
-$\bullet$ {\Large $\frac{dR_t}{dF_t}$ = $\frac{d}{dF_t} $ } $\left \{ \mu\left ( F_{t-1}.r_t-\delta\left | F_t-F_{t-1} \right | \right ) \right \}$
+$\bullet$ {\Large $\frac{dR_t}{dF_t}$ 
+
+ $=\frac{d}{dF_t} $ } $\left \{ \mu\left ( F_{t}.r_{t+1}-\delta\left | F_t-F_{t-1} \right | \right ) \right \}$
 
 
-{\Large \hspace{1.2cm} =$\frac{d}{dF_t}$ } $\left \{ -\mu.\delta.\left | F_t-F_{t-1} \right | \right \}$
+{\Large $=\frac{d}{dF_t}$ } $\left \{ \mu.r_{t+1}.F_t -\mu.\delta.\left | F_t-F_{t-1} \right | \right \}$
 
 
-\hspace{1.2cm}=$\left\{\begin{matrix}
- -\mu.\delta \ \  F_t-F_{t-1}>0  & \\ 
- \mu.\delta \ \ F_t-F_{t-1}<0
-\end{matrix}\right.$
+$= \mu \left \{ r_{t+1} - \delta.sign\left ( F_t-F_{t-1} \right ) \right \}$
 
+{\Large $\bullet \frac{dR_t}{dF_{t-1}}$} 
 
-\hspace{1.2cm}=$-\mu\delta.sign\left ( F_t-F_{t-1} \right )$
-
-{\Large $\bullet \frac{dR_t}{dF_{t-1}}$} {\Large=$\frac{d}{dF_{t-1}}$ }$\left \{ \mu\left ( F_{t-1}.r_t-\delta\left | F_t-F_{t-1} \right | \right ) \right \}$
-
-
-\hspace{1.2cm} = {\Large$\mu.r_t-\frac{d}{dF_{t-1}}$}$\left \{ -\mu.\delta.\left | F_t-F_{t-1} \right | \right \}$
-
-
-\hspace{1.2cm}=$\left\{\begin{matrix}
- \mu.\delta \ \  F_t-F_{t-1}>0  & \\ 
- -\mu.\delta \ \ F_t-F_{t-1}<0
-\end{matrix}\right.$
-
-
-\hspace{1.2cm}=$\mu.r_t+\mu \delta.sign\left ( F_t-F_{t-1} \right )$
+{\Large$=\frac{d}{dF_{t-1}}$ }$\left \{ \mu\left ( F_{t}.r_{t+1}-\delta\left | F_t-F_{t-1} \right | \right ) \right \}$
+ 
+ $=-\mu.\delta.$ {\Large $\frac{d}{dF_{t-1}}$} $\left|F_{t-1}-F_t \right|$
+ 
+ $=\mu.\delta.sign\left(F_{t-1}-F_t \right)$
 
 
 Khi đó, đạo hàm từng phần $dF_t/dw$ và $dF_{t-1}/dw$ được tính như sau:
 
-{\Large $\bullet\frac{\partial F_t}{\partial w} = \frac{\partial}{\partial w}$ }$\left \{ tanh(w^Tx_t) \right \}$
+{\Large $\bullet\frac{dF_t}{d w} = \frac{d}{d w}$ }$\left \{ tanh(w^Tx_t) \right \}$
 
-\hspace{1.2cm}=$\left ( 1-tanh\left ( w^Tx_t \right )^2 \right ).$ {\Large$\frac{\partial}{\partial w}$ } $.\left \{ w^T.x_t \right \}$
+$=\left ( 1-tanh\left ( w^Tx_t \right )^2 \right ).$ {\Large$\frac{d}{d w}$ } $\left \{ w^T.x_t \right \}$
 
-\hspace{1.2cm}=$\left ( 1-tanh\left ( w^Tx_t \right )^2 \right )\left \{ x_t+w_{M+2}\frac{\partial F_{t-1}}{\partial w}\right \}$
+$=\left ( 1-tanh\left ( w^Tx_t \right )^2 \right )\left \{ x_t+w_{M+2} \left(\frac{d F_{t-1}}{d w}\right)\right \}$
 
-Lưu ý rằng đạo hàm $\partial F_t/\partial w$ có tính hồi quy và phụ thuộc vào tất cả các giá trị trước đó của nó. Điều này nghĩa là để tính được tham số thì ta phải có giá trị $\partial F_t/\partial w$ từ chuỗi thời gian ban đầu. Bởi vì dữ liệu cổ phiếu trong khoảng 1000 - 2000 mẫu, điều này làm chậm hướng tăng nhưng vẫn tính toán được.
+Lưu ý rằng đạo hàm $d F_t/d w$ có tính hồi quy và phụ thuộc vào tất cả các giá trị trước đó của nó. Điều này nghĩa là để tính được tham số thì ta phải có giá trị $d F_t/d w$ từ chuỗi thời gian ban đầu. Bởi vì dữ liệu cổ phiếu trong khoảng 1000 - 2000 mẫu, điều này làm chậm hướng tăng nhưng vẫn tính toán được.
 
-Khi điều kiện $\partial S_t/\partial w$ được tính toán, khối lượng ta cập nhật tuân theo nguyên tắc hướng tăng: $w_{t+1}=w_t+\rho.\partial S_T/\partial w$. Quá trình đươc lặp lại với số lần lặp tối đa $N_e$.
+Khi điều kiện $d S_t/d w$ được tính toán, khối lượng ta cập nhật tuân theo nguyên tắc hướng tăng: $w_{t+1}=w_t+\rho.d S_T/d w$. Quá trình đươc lặp lại với số lần lặp tối đa $N_e$.
 
 \section{Thuật toán}
 
-*\textbf{Input: }
+\hspace{1cm}*\textbf{Input: }
 
 $\quad \bullet$ Kho dữ liệu giá $\mathbb{P}$ trong T ngày
 
@@ -353,9 +336,8 @@ $\quad \bullet $ $N_e$ là số lần lặp tối đa dùng trong phương pháp
 
 $\quad \bullet $ {\large $\epsilon$} là sai số chấp nhận trong phương pháp hướng tăng gradient
 
-
-*\textbf{Output: } Lợi nhuận $\mathit{R}$, shapre $\mathit{S}$ và phương án đầu tư $\mathit{F}$ 
-
+*\textbf{Output: } Lợi nhuận $\mathit{R}$, sharpe $\mathit{S}$ và phương án đầu tư $\mathit{F}$ 
+\newpage
 *\textbf{Thuật toán: }
 
 \begin{center}
@@ -417,7 +399,7 @@ Tóm lại, trong trường hợp này, kết luận của nhóm là không hẳ
 \end{center} 
 
 \addcontentsline{toc}{chapter}{{Danh mục công trình công bố của tác giả}}
-\chapter*{Tiệu tham khảo}
+\chapter*{Tài liệu tham khảo}
 \begin{flushleft}
 
 \quad $[1]$\ Pierpaolo G. Necchi: \textit{ Reinforcement Learning For Automated Trading}

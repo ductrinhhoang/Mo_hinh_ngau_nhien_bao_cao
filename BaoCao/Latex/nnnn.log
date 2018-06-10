@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.5.18)  10 JUN 2018 15:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.5.18)  10 JUN 2018 22:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -583,43 +583,43 @@ Ch\uhorn \ohorn ng 3.
 [13
 
 ] [14] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 278--279
+Underfull \hbox (badness 10000) in paragraph at lines 270--271
 
  []
 
-[16] [17]
-<Thuat_toan.jpg, id=72, 506.6428pt x 566.86781pt>
+[16] [17] [18]
+<Thuat_toan.jpg, id=75, 506.6428pt x 566.86781pt>
 File: Thuat_toan.jpg Graphic file (type jpg)
 <use Thuat_toan.jpg>
-Package pdftex.def Info: Thuat_toan.jpg  used on input line 362.
+Package pdftex.def Info: Thuat_toan.jpg  used on input line 344.
 (pdftex.def)             Requested size: 455.97432pt x 510.17632pt.
- [18] [19 <./Thuat_toan.jpg>]
+ [19 <./Thuat_toan.jpg>]
 Ch\uhorn \ohorn ng 4.
-<result_1-1.png, id=81, 1076.52188pt x 620.81938pt>
+<result_1-1.png, id=80, 1076.52188pt x 620.81938pt>
 File: result_1-1.png Graphic file (type png)
 <use result_1-1.png>
-Package pdftex.def Info: result_1-1.png  used on input line 377.
+Package pdftex.def Info: result_1-1.png  used on input line 359.
 (pdftex.def)             Requested size: 430.60112pt x 248.32335pt.
-<result_1-2.png, id=83, 1085.55562pt x 621.82312pt>
+<result_1-2.png, id=82, 1085.55562pt x 621.82312pt>
 File: result_1-2.png Graphic file (type png)
 <use result_1-2.png>
-Package pdftex.def Info: result_1-2.png  used on input line 381.
+Package pdftex.def Info: result_1-2.png  used on input line 363.
 (pdftex.def)             Requested size: 434.21455pt x 248.72484pt.
 [20
 
 ] [21 <./result_1-1.png> <./result_1-2.png>] [22]
-Overfull \hbox (1.80739pt too wide) in paragraph at lines 397--397
+Overfull \hbox (1.80739pt too wide) in paragraph at lines 379--379
 []\T5/cmr/bx/n/20.74 Vi»c luy»n nhi·u b¬ng nhi·u dú li»u ch÷a
  []
 
 File: result_1-1.png Graphic file (type png)
 <use result_1-1.png>
-Package pdftex.def Info: result_1-1.png  used on input line 409.
+Package pdftex.def Info: result_1-1.png  used on input line 391.
 (pdftex.def)             Requested size: 430.60112pt x 248.32335pt.
-<result_2-1.png, id=95, 1076.52188pt x 619.81563pt>
+<result_2-1.png, id=94, 1076.52188pt x 619.81563pt>
 File: result_2-1.png Graphic file (type png)
 <use result_2-1.png>
-Package pdftex.def Info: result_2-1.png  used on input line 413.
+Package pdftex.def Info: result_2-1.png  used on input line 395.
 (pdftex.def)             Requested size: 430.60112pt x 247.92186pt.
 [23] [24 <./result_2-1.png>] [25
 
@@ -627,7 +627,7 @@ Package pdftex.def Info: result_2-1.png  used on input line 413.
 Here is how much of TeX's memory you used:
  3944 strings out of 492649
  52392 string characters out of 6133384
- 122240 words of memory out of 5000000
+ 121240 words of memory out of 5000000
  7720 multiletter control sequences out of 15000+600000
  25124 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -645,11 +645,11 @@ y10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c
 /2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/201
 8/texmf-dist/fonts/type1/vntex/vnr/vnbx12.pfb><c:/texlive/2018/texmf-dist/fonts
 /type1/vntex/vnr/vnr12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/vntex/vnr/vn
-r17.pfb><c:/texlive/2018/texmf-dist/fonts/type1/vntex/vnr/vnti12.pfb>
-Output written on nnnn.pdf (25 pages, 922170 bytes).
+ti12.pfb>
+Output written on nnnn.pdf (25 pages, 919374 bytes).
 PDF statistics:
- 159 PDF objects out of 1000 (max. 8388607)
- 106 compressed objects within 2 object streams
+ 155 PDF objects out of 1000 (max. 8388607)
+ 103 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
