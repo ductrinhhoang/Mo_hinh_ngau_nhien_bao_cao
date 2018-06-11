@@ -267,20 +267,20 @@ $S_T=$ {\Large$\frac{E[R_t]}{\sqrt{E[R_t ^2]-(E[R_t])^2}} =\frac{A}{\sqrt{B-A^2}
 \end{center}
 
 
-\hspace{6cm} ,với $A=${\large $\frac{1}{T} \sum\limits_{t=1}^{T}R_t$ }và $B$= {\large$\frac{1}{T} \sum\limits_{t=1}^{T}R_t^2$} $\newline$
+\hspace{6cm} ,với $A=${\large $\frac{1}{T} \sum_{t=1}^{T}R_t$ }và $B$= {\large$\frac{1}{T} \sum_{t=1}^{T}R_t^2$} $\newline$
 
-Sau đó chúng ta lấy đạo hàm của $S_T$:
+Sau đó chúng ta lấy đạo hàm của $S_T$ sử dụng chuỗi:
 
 {\Large
-$\frac{d S_T}{dw}=\frac{d}{dw}\left \{ \frac{A}{\sqrt{B-A^2}} \right \}$
+$\frac{\partial S_T}{\partial w}=\frac{\partial}{\partial w}\left \{ \frac{A}{\sqrt{B-A^2}} \right \}$
 
-$=\frac{dS_T}{dA}\frac{dA}{dw}+\frac{dS_T}{dB}\frac{dB}{dw}$
-
-
-$=\sum\limits_{t=1}^{T} \left\{\frac{dS_T}{dA}\frac{dA}{dR_t}+\frac{dS_T}{dB}\frac{dB}{dR_t}\right\}\frac{dR_t}{dw}$
+$=\frac{dS_T}{dA}.\frac{\partial A}{\partial w}+\frac{dS_T}{dB}.\frac{\partial B}{\partial w}$
 
 
-$=\sum\limits_{t=1}^{T} \left\{\frac{dS_T}{dA}\frac{dA}{dR_t}+\frac{dS_T}{dB}\frac{dB}{dR_t}\right\}\left\{\frac{dR_t}{dF_t}\frac{dF_t}{dw}+\frac{dR_t}{dF_{t-1}} \frac{dF_{t-1}}{dw}\right\}$
+$=\sum_{t=1}^{T} \left\{\frac{dS_T}{dA}.\frac{dA}{dR_t}+\frac{dS_T}{dB}.\frac{dB}{dR_t}\right\}.\frac{\partial R_t}{\partial w}$
+
+
+$=\sum_{t=1}^{T} \left\{\frac{dS_T}{dA}.\frac{dA}{dR_t}+\frac{dS_T}{dB}.\frac{dB}{dR_t}\right\}. \left\{\frac{dR_t}{dF_t}.\frac{\partial F_t}{\partial w}+\frac{dR_t}{dF_{t-1}} \frac{\partial F_{t-1}}{\partial w}\right\}$
 }
 
 Đạo hàm từng phần, kết quả trả về được hàm:
@@ -299,26 +299,28 @@ $= \mu \left \{ r_{t+1} - \delta.sign\left ( F_t-F_{t-1} \right ) \right \}$
 
 {\Large$=\frac{d}{dF_{t-1}}$ }$\left \{ \mu\left ( F_{t}.r_{t+1}-\delta\left | F_t-F_{t-1} \right | \right ) \right \}$
  
- $=-\mu.\delta.$ {\Large $\frac{d}{dF_{t-1}}$} $\left|F_{t-1}-F_t \right|$
+ $=\mu.r_{t+1}.$ {\Large $\frac{dF_t}{d(w^T.x_t)}.\frac{d(w^T.x_t)}{dF_{t-1}}$}$-\mu.\delta.$ {\Large $\frac{d}{dF_{t-1}}$} $\left|F_{t-1}-F_t \right|$
  
- $=\mu.\delta.sign\left(F_{t-1}-F_t \right)$
+ $=\mu.r_{t+1}.$ {\Large $\frac{1}{cosh^2(w^Tx_t)}$}$.w_{M+2}-\mu.\delta.sign\left(F_{t-1}-F_t \right)$
+
+ $=.$ {\Large $\frac{\mu.r_{t+1}.w_{M+2}}{cosh^2(w^Tx_t)}$}$-\mu.\delta.sign\left(F_{t-1}-F_t \right)$
 
 
 Khi đó, đạo hàm từng phần $dF_t/dw$ và $dF_{t-1}/dw$ được tính như sau:
 
-{\Large $\bullet\frac{dF_t}{d w} = \frac{d}{d w}$ }$\left \{ tanh(w^Tx_t) \right \}$
+{\Large $\bullet\frac{\partial F_t}{\partial w} = \frac{\partial}{\partial w}$ }$\left \{ tanh(w^Tx_t) \right \}$
 
-$=\left ( 1-tanh\left ( w^Tx_t \right )^2 \right ).$ {\Large$\frac{d}{d w}$ } $\left \{ w^T.x_t \right \}$
+$=\left ( 1-tanh\left ( w^Tx_t \right )^2 \right ).$ {\Large$\frac{\partial}{\partial w}$ } $\left \{ w^T.x_t \right \}$
 
-$=\left ( 1-tanh\left ( w^Tx_t \right )^2 \right )\left \{ x_t+w_{M+2} \left(\frac{d F_{t-1}}{d w}\right)\right \}$
+$=\left ( 1-tanh\left ( w^Tx_t \right )^2 \right )\left \{ x_t+w_{M+2} \left(\frac{\partial F_{t-1}}{\partial w}\right)\right \}$
 
-Lưu ý rằng đạo hàm $d F_t/d w$ có tính hồi quy và phụ thuộc vào tất cả các giá trị trước đó của nó. Điều này nghĩa là để tính được tham số thì ta phải có giá trị $d F_t/d w$ từ chuỗi thời gian ban đầu. Bởi vì dữ liệu cổ phiếu trong khoảng 1000 - 2000 mẫu, điều này làm chậm hướng tăng nhưng vẫn tính toán được.
+Lưu ý rằng đạo hàm $\partial F_t/\partial w$ có tính hồi quy và phụ thuộc vào tất cả các giá trị trước đó của nó. Điều này nghĩa là để tính được tham số thì ta phải có giá trị $\partial F_t/\partial w$ từ chuỗi thời gian ban đầu. Bởi vì dữ liệu cổ phiếu trong khoảng 1000 - 2000 mẫu, điều này làm chậm hướng tăng nhưng vẫn tính toán được.
 
-Khi điều kiện $d S_t/d w$ được tính toán, khối lượng ta cập nhật tuân theo nguyên tắc hướng tăng: $w_{t+1}=w_t+\rho.d S_T/d w$. Quá trình đươc lặp lại với số lần lặp tối đa $N_e$.
+Khi điều kiện $\partial S_t/\partial w$ được tính toán, khối lượng ta cập nhật tuân theo nguyên tắc hướng tăng: $w_{t+1}=w_t+\rho.\partial S_T/\partial w$. Quá trình đươc lặp lại với số lần lặp tối đa $N_e$.
 
 \section{Thuật toán}
 
-\hspace{1cm}*\textbf{Input: }
+*\textbf{Input: }
 
 $\quad \bullet$ Kho dữ liệu giá $\mathbb{P}$ trong T ngày
 
@@ -397,8 +399,8 @@ Tóm lại, trong trường hợp này, kết luận của nhóm là không hẳ
     \caption{T = 1280, n = 5, N = 60, m = 5}
     \end{figure}
 \end{center} 
+\newpage
 
-\addcontentsline{toc}{chapter}{{Danh mục công trình công bố của tác giả}}
 \chapter*{Tài liệu tham khảo}
 \begin{flushleft}
 
